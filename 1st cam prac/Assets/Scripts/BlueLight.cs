@@ -1,0 +1,39 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class BlueLight : MonoBehaviour
+{
+    // Start is called before the first frame update
+    public GameObject [] wireWatch;
+    private Color [] properColors;
+    private System.Boolean cats = true;
+
+    void Start()
+    {
+        properColors[0] = Color.red;
+        properColors[1] = Color.blue;
+        properColors[2] = Color.black;
+
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+        for (int i=0; i < wireWatch.Length; i++){
+            if(wireWatch[i].GetComponent<Renderer>().material.color != properColors[i])
+            {
+                cats = false;
+            }
+            }
+
+        if(cats == true)
+        {
+            Debug.Log("Mouse");
+        }
+        
+        
+    }
+}
