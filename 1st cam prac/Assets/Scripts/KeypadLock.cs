@@ -6,8 +6,9 @@ using UnityEngine.UI;
 public class KeypadLock : MonoBehaviour
 {
     public GameObject door;             //GameObject that is currently in "locked" state
-    public GameObject textFieldObject;
+    //public GameObject textFieldObject;
     public InputField textField;
+    public GameObject screen;
 
     private string password = "whistle";
     private string hintTrigger = "ufgqrjc";
@@ -16,7 +17,8 @@ public class KeypadLock : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        textFieldObject.SetActive(false);
+        //textFieldObject.SetActive(false);
+        screen.SetActive(false);
         //var eventListener = new InputField.SubmitEvent();
         //eventListener.AddListener(PasswordEntered);
         //textField.onEndEdit = eventListener;
@@ -33,7 +35,8 @@ public class KeypadLock : MonoBehaviour
             {
                 if (cast.transform.gameObject.name == "Keypad" && numTries > 0)     //check that user clicked on keypad
                 {
-                    textFieldObject.SetActive(true);
+                    //textFieldObject.SetActive(true);
+                    screen.SetActive(true);
                     var eventListener = new InputField.SubmitEvent();
                     eventListener.AddListener(PasswordEntered);
                     textField.onEndEdit = eventListener;
