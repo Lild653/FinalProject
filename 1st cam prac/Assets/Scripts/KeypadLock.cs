@@ -9,7 +9,8 @@ public class KeypadLock : MonoBehaviour
     public GameObject textFieldObject;
     public InputField textField;
 
-    private string password = "ABCD";
+    private string password = "whistle";
+    private string hintTrigger = "ufgqrjc";
     private string userInput = "";
     private int numTries = 3;
     // Start is called before the first frame update
@@ -70,6 +71,10 @@ public class KeypadLock : MonoBehaviour
         }
         else
         {
+            if (userInput.Equals(hintTrigger))
+            {
+                print("You're getting warmer. Hint 3 could be of use...");
+            }
             numTries--;
             print("Password is incorrect. You have " + numTries + " remaining.");
         }
