@@ -2367,7 +2367,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-4640
+  m_Name: pb_Mesh15252
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2646,7 +2646,7 @@ GameObject:
   - component: {fileID: 927386771}
   - component: {fileID: 927386770}
   m_Layer: 0
-  m_Name: Cylinder
+  m_Name: BlueWire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3573,7 +3573,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-4704
+  m_Name: pb_Mesh15212
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4245,7 +4245,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-39160
+  m_Name: pb_Mesh15172
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4417,7 +4417,7 @@ GameObject:
   - component: {fileID: 2049614495}
   - component: {fileID: 2049614494}
   m_Layer: 0
-  m_Name: Cylinder
+  m_Name: RedWire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
