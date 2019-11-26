@@ -42,7 +42,11 @@ GameObject:
   - component: {fileID: 8218248790655700125}
   - component: {fileID: 8218248790655700124}
   - component: {fileID: 8218248790655700123}
-  - component: {fileID: 8218248790655700120}
+  - component: {fileID: 8017575035220065825}
+  - component: {fileID: 1946940234347626336}
+  - component: {fileID: 1208652191313495465}
+  - component: {fileID: 2706355768284856157}
+  - component: {fileID: 4617484237406593454}
   m_Layer: 9
   m_Name: Camera
   m_TagString: MainCamera
@@ -125,7 +129,7 @@ Behaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8218248790655700197}
   m_Enabled: 1
---- !u!114 &8218248790655700120
+--- !u!114 &8017575035220065825
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -134,9 +138,168 @@ MonoBehaviour:
   m_GameObject: {fileID: 8218248790655700197}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd1babdd421b044a9ba5dd77b89f1395, type: 3}
+  m_Script: {fileID: 11500000, guid: bd0b7ff2c54694e47bc4b0b426c54d2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1946940234347626336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8218248790655700197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ce005605ca414c56a6103cec4397a0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  axes: 0
+  sensitivityX: 15
+  sensitivityY: 15
+  minimumX: -360
+  maximumX: 360
+  minimumY: -60
+  maximumY: 60
+--- !u!114 &1208652191313495465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8218248790655700197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42d5ea501310c4959a66b36c299354b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactive: {fileID: 0}
+--- !u!143 &2706355768284856157
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8218248790655700197}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 2
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4617484237406593454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8218248790655700197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6073bab7b8f4845c89418c689dbb47ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canControl: 1
+  useFixedUpdate: 1
+  movement:
+    maxForwardSpeed: 10
+    maxSidewaysSpeed: 10
+    maxBackwardsSpeed: 10
+    slopeSpeedMultiplier:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: -90
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 90
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    maxGroundAcceleration: 100
+    maxAirAcceleration: 20
+    gravity: 10
+    maxFallSpeed: 20
+    collisionFlags: 0
+    velocity: {x: 0, y: 0, z: 0}
+    frameVelocity: {x: 0, y: 0, z: 0}
+    hitPoint: {x: 0, y: 0, z: 0}
+    lastHitPoint: {x: Infinity, y: 0, z: 0}
+  jumping:
+    enabled: 1
+    baseHeight: 1
+    extraHeight: 4.1
+    perpAmount: 0
+    steepPerpAmount: 0.5
+    jumping: 0
+    holdingJumpButton: 0
+    lastStartTime: 0
+    lastButtonDownTime: -100
+    jumpDir: {x: 0, y: 1, z: 0}
+  movingPlatform:
+    enabled: 1
+    movementTransfer: 2
+    hitPlatform: {fileID: 0}
+    activePlatform: {fileID: 0}
+    activeLocalPoint: {x: 0, y: 0, z: 0}
+    activeGlobalPoint: {x: 0, y: 0, z: 0}
+    activeLocalRotation: {x: 0, y: 0, z: 0, w: 0}
+    activeGlobalRotation: {x: 0, y: 0, z: 0, w: 0}
+    lastMatrix:
+      e00: 0
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 0
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 0
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 0
+    platformVelocity: {x: 0, y: 0, z: 0}
+    newPlatform: 0
+  sliding:
+    enabled: 1
+    slidingSpeed: 15
+    sidewaysControl: 1
+    speedControl: 0.4
+  inputMoveDirection: {x: 0, y: 0, z: 0}
+  inputJump: 0
+  grounded: 1
+  groundNormal: {x: 0, y: 0, z: 0}
+  lastGroundNormal: {x: 0, y: 0, z: 0}
 --- !u!1 &8218248790794644091
 GameObject:
   m_ObjectHideFlags: 0
