@@ -10,6 +10,7 @@ public class CubeSelect : MonoBehaviour
 
     public Canvas interactive;
     private RaycastHit vision;
+   
     // Start is called before the first frame update
     void Start()
     {
@@ -20,10 +21,10 @@ public class CubeSelect : MonoBehaviour
     void Update()
     {
 
-        Debug.DrawRay(Camera.main.transform.position, Camera.main.transform.forward, Color.red, 80f);
+        //Debug.DrawRay(Camera.main.transform.position, Camera.main.transform.forward, Color.red, 80f);
        
 
-        System.Boolean objetoHit = Physics.Raycast(Camera.main.ScreenPointToRay(Vector3.forward), out vision);
+        System.Boolean objetoHit = Physics.Raycast(Camera.main.ScreenPointToRay(new Vector3((0.5f) * Screen.width, (0.5f)* Screen.height,0)), out vision);
 
         
         if (objetoHit)
@@ -36,6 +37,7 @@ public class CubeSelect : MonoBehaviour
                 Debug.Log("Press F to pick up");
                 if (Input.GetKey(KeyCode.F))
                 {
+
                     Destroy(vision.collider.gameObject);
                 }
             }
@@ -49,6 +51,10 @@ public class CubeSelect : MonoBehaviour
 
 
 
+        }
+        else
+        {
+            interactive.enabled = false;
         }
         
 

@@ -11,9 +11,11 @@ public class BlueLight : MonoBehaviour
 
     void Start()
     {
+        wireWatch = new GameObject[2];
+        properColors = new Color[2];
         properColors[0] = Color.red;
-        properColors[1] = Color.blue;
-        properColors[2] = Color.black;
+        properColors[1] = Color.green;
+       // properColors[2] = Color.black;
 
         
     }
@@ -23,11 +25,12 @@ public class BlueLight : MonoBehaviour
     {
         
         for (int i=0; i < wireWatch.Length; i++){
+            Debug.Log(wireWatch.Length);
             if(wireWatch[i].GetComponent<Renderer>().material.color != properColors[i])
             {
                 cats = false;
             }
-            }
+        }
 
         if(cats == true)
         {

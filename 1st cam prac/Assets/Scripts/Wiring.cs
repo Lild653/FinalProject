@@ -48,7 +48,7 @@ public class Wiring : MonoBehaviour
         System.Boolean objeto = Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out mouseLocal);
         if (objeto && mouseLocal.collider.gameObject == gameObject && Input.GetKeyDown(KeyCode.A)) 
         {
-            Debug.Log("Smoke Netflix Chill");
+
             if (i ==0)
             {
                
