@@ -15,9 +15,4 @@ public class FinalDoorScript : MonoBehaviour
     {
         openDoorAnimate.SetTrigger("OpenDoor");
     }
-
-    //void stopAnimation()
-    //{
-    //    openDoorAnimate.enabled = false;
-    //}
 }
