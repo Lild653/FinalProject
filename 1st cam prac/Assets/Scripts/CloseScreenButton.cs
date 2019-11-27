@@ -5,19 +5,8 @@ using UnityEngine;
 public class CloseScreenButton : MonoBehaviour
 {
     public GameObject screen;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    void Close()
+    public void Close()
     {
         screen.SetActive(false);
     }

@@ -61,15 +61,15 @@ public class KeypadLock : MonoBehaviour
 
     void Unlock()
     {
-        print("Unlocked!");
-        //delete door
-        //Instantiate new open door
+        door.GetComponent<FinalDoorScript>().OpenDoor();
+
     }
 
     void PasswordEntered(string userInput)
     {
         if(userInput.Equals(password))
         {
+            screen.SetActive(false);
             Unlock();
         }
         else
