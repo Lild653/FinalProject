@@ -23,8 +23,8 @@ public class Inventory : MonoBehaviour
         inventorymap = new Dictionary<string, bool>();
         inventorymap.Add("FlashLight", false);
         inventorymap.Add("Key", false);
-        inventorymap.Add("FlashLight", false);
         inventorymap.Add("Lock", false);
+        inventorymap.Add("Letter", false);
         inventorymap.Add("WireBox", false);
 
     }
