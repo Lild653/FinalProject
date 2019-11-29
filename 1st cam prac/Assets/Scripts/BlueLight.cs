@@ -8,6 +8,7 @@ public class BlueLight : MonoBehaviour
     // Start is called before the first frame update
    
     public GameObject [] wireWatch;
+    public GameObject gameManager;
     private Color [] properColors;
 
     private new Color renderer;
@@ -57,7 +58,8 @@ public class BlueLight : MonoBehaviour
             foreach(GameObject girly in helper)
             {
                 girly.GetComponentInChildren<Light>().enabled = true;
-                //girly.GetComponent<
+                //gameManager.GetComponent<GameManager>.lastPuzzleSolved = 2;
+               
             }
             
         }
