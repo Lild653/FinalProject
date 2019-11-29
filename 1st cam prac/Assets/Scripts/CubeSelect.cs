@@ -38,7 +38,8 @@ public class CubeSelect : MonoBehaviour
                 if (Input.GetKey(KeyCode.F))
                 {
 
-                    Destroy(vision.collider.gameObject);
+                    //Destroy(vision.collider.gameObject);
+                    inventoryCanvas.GetComponent<Inventory>().OnCollect(vision.collider.gameObject);
                 }
             }
             else
