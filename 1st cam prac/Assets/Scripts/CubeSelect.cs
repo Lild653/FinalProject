@@ -21,7 +21,7 @@ public class CubeSelect : MonoBehaviour
     void Update()
     {
 
-        //Debug.DrawRay(Camera.main.transform.position, Camera.main.transform.forward, Color.red, 80f);
+        
        
 
         System.Boolean objetoHit = Physics.Raycast(Camera.main.ScreenPointToRay(new Vector3((0.5f) * Screen.width, (0.5f)* Screen.height,0)), out vision);
@@ -29,12 +29,11 @@ public class CubeSelect : MonoBehaviour
         
         if (objetoHit)
         {
-            if (vision.collider.tag == "Cube")
+            if (vision.collider.name == "Plate")
             {
-                interactive.enabled = true;
+            
 
-                //interactive.enabled=true;
-                Debug.Log("Press F to pick up");
+                interactive.enabled=true;
                 if (Input.GetKey(KeyCode.F))
                 {
 

@@ -6,20 +6,29 @@ using UnityEngine;
 public class BlueLight : MonoBehaviour
 {
     // Start is called before the first frame update
+   
     public GameObject [] wireWatch;
     private Color [] properColors;
 
     private new Color renderer;
+    
 
     void Start()
     {
+
        // wireWatch = new GameObject[2];
-        properColors = new Color[2];
+        properColors = new Color[8];
         properColors[0] = Color.red;
-        properColors[1] = Color.green;
-//        properColors[2] = Color.black;
+        properColors[1] = Color.magenta;
+        properColors[2] = Color.yellow;
+        properColors[3] = Color.green;
+        properColors[4] = Color.cyan;
+        properColors[5] = Color.grey;
+        properColors[6] = Color.blue;
+        properColors[7] = Color.black;
     }
 
+    
     private System.Boolean ColorChecker()
     {
         for (int i = 0; i < wireWatch.Length; i++)
@@ -42,14 +51,25 @@ public class BlueLight : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        GameObject[] helper = GameObject.FindGameObjectsWithTag("Lights");
         if (ColorChecker())
         {
-            gameObject.GetComponent<Light>().enabled = true;
+            foreach(GameObject girly in helper)
+            {
+                girly.GetComponentInChildren<Light>().enabled = true;
+                //girly.GetComponent<
+            }
+            
         }
         else
         {
-            gameObject.GetComponent<Light>().enabled = false;
+            foreach (GameObject girly in helper)
+            {
+                girly.GetComponentInChildren<Light>().enabled = false;
+            }
         }
+
+        
         
     }
 }
