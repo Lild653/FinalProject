@@ -19,6 +19,9 @@ public class Wiring : MonoBehaviour
         tempColor.Add(Color.yellow);
         tempColor.Add(Color.green);
         tempColor.Add(Color.cyan);
+
+
+
         tempColor.Add(Color.grey);
         tempColor.Add(Color.blue);
         tempColor.Add(Color.black);
