@@ -9,6 +9,7 @@ public class CubeSelect : MonoBehaviour
 {
 
     public Canvas interactive;
+    public Canvas inventoryCanvas;
     private RaycastHit vision;
    
     // Start is called before the first frame update
@@ -29,7 +30,7 @@ public class CubeSelect : MonoBehaviour
         
         if (objetoHit)
         {
-            if (vision.collider.tag == "Cube")
+            if (vision.collider.tag == "Cube")  //change to pickup tag or layer once all objects in scene
             {
                 interactive.enabled = true;
 
@@ -38,7 +39,9 @@ public class CubeSelect : MonoBehaviour
                 if (Input.GetKey(KeyCode.F))
                 {
 
-                    Destroy(vision.collider.gameObject);
+                    //Destroy(vision.collider.gameObject);
+                    inventoryCanvas.GetComponent<Inventory>().OnCollect(vision.collider.gameObject);
+
                 }
             }
             else
