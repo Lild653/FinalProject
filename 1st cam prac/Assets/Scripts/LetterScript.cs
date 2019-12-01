@@ -10,15 +10,19 @@ public class LetterScript : MonoBehaviour
     void Start()
     {
         letterCanvas.SetActive(false);
+        //letterCanvas.GetChild<Text>().SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.L) && gameManager.GetComponent<GameManager>().lightsOn == true)
+        if (Input.GetKeyDown(KeyCode.L))
         {
-
             letterCanvas.SetActive(true);
+            if (gameManager.GetComponent<GameManager>().lightsOn == true)
+            {
+                //set text active too
+            }
         }
     }
 }
