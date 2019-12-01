@@ -31,7 +31,7 @@ public class CubeSelect : MonoBehaviour
         if (objetoHit)
         {
             //if (vision.collider.tag == "Pickup")
-            if(vision.collider.gameObject.CompareTag("Pickup"))
+            if(vision.collider.CompareTag("Pickup"))
             {
 
                 print("Press F");

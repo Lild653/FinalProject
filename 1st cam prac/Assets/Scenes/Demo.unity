@@ -146,7 +146,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh21652
+  m_Name: pb_Mesh32228
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1103,19 +1103,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 10800000, guid: 050589558d1eca446a29d5dba20e1ff2, type: 3}
       propertyPath: m_BoundingSphereOverride.y
-      value: 0
+      value: 2.3380876e-26
       objectReference: {fileID: 0}
     - target: {fileID: 10800000, guid: 050589558d1eca446a29d5dba20e1ff2, type: 3}
       propertyPath: m_BoundingSphereOverride.z
-      value: 0.3203125
+      value: 1e-45
       objectReference: {fileID: 0}
     - target: {fileID: 10800000, guid: 050589558d1eca446a29d5dba20e1ff2, type: 3}
       propertyPath: m_BoundingSphereOverride.w
-      value: 15.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 10800000, guid: 050589558d1eca446a29d5dba20e1ff2, type: 3}
       propertyPath: m_BoundingSphereOverride.x
-      value: -1.9852458e+23
+      value: NaN
       objectReference: {fileID: 0}
     - target: {fileID: 10800000, guid: 050589558d1eca446a29d5dba20e1ff2, type: 3}
       propertyPath: m_Color.r
@@ -1210,19 +1210,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 10800000, guid: 050589558d1eca446a29d5dba20e1ff2, type: 3}
       propertyPath: m_BoundingSphereOverride.y
-      value: 34.5
+      value: 1.61e-43
       objectReference: {fileID: 0}
     - target: {fileID: 10800000, guid: 050589558d1eca446a29d5dba20e1ff2, type: 3}
       propertyPath: m_BoundingSphereOverride.z
-      value: 11.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 10800000, guid: 050589558d1eca446a29d5dba20e1ff2, type: 3}
-      propertyPath: m_BoundingSphereOverride.w
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 10800000, guid: 050589558d1eca446a29d5dba20e1ff2, type: 3}
+      propertyPath: m_BoundingSphereOverride.w
+      value: 1593117
+      objectReference: {fileID: 0}
+    - target: {fileID: 10800000, guid: 050589558d1eca446a29d5dba20e1ff2, type: 3}
       propertyPath: m_BoundingSphereOverride.x
-      value: 0.2109375
+      value: 1e-45
       objectReference: {fileID: 0}
     - target: {fileID: 10800000, guid: 050589558d1eca446a29d5dba20e1ff2, type: 3}
       propertyPath: m_Color.r
@@ -1281,7 +1281,7 @@ GameObject:
   - component: {fileID: 599983926}
   m_Layer: 0
   m_Name: Plate
-  m_TagString: Untagged
+  m_TagString: Pickup
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1687,7 +1687,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh21498
+  m_Name: pb_Mesh32074
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2159,7 +2159,7 @@ PrefabInstance:
     - target: {fileID: 108038271100546340, guid: d86ca2f4159e6a942abd8dfc52b38395,
         type: 3}
       propertyPath: m_BoundingSphereOverride.x
-      value: 1e-45
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 108038271100546340, guid: d86ca2f4159e6a942abd8dfc52b38395,
         type: 3}
@@ -2169,12 +2169,12 @@ PrefabInstance:
     - target: {fileID: 108038271100546340, guid: d86ca2f4159e6a942abd8dfc52b38395,
         type: 3}
       propertyPath: m_BoundingSphereOverride.w
-      value: 9.674539e-35
+      value: 1690320
       objectReference: {fileID: 0}
     - target: {fileID: 108038271100546340, guid: d86ca2f4159e6a942abd8dfc52b38395,
         type: 3}
       propertyPath: m_BoundingSphereOverride.y
-      value: NaN
+      value: 1.61e-43
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d86ca2f4159e6a942abd8dfc52b38395, type: 3}
@@ -2432,19 +2432,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 10800000, guid: 11ab42927a7ebba428755ec66d7857df, type: 3}
       propertyPath: m_BoundingSphereOverride.y
-      value: 33
+      value: 9.880089e-17
       objectReference: {fileID: 0}
     - target: {fileID: 10800000, guid: 11ab42927a7ebba428755ec66d7857df, type: 3}
       propertyPath: m_BoundingSphereOverride.z
-      value: 11.5
+      value: 1e-45
       objectReference: {fileID: 0}
     - target: {fileID: 10800000, guid: 11ab42927a7ebba428755ec66d7857df, type: 3}
       propertyPath: m_BoundingSphereOverride.w
-      value: 0
+      value: -4.2761847e+20
       objectReference: {fileID: 0}
     - target: {fileID: 10800000, guid: 11ab42927a7ebba428755ec66d7857df, type: 3}
       propertyPath: m_BoundingSphereOverride.x
-      value: 0.2109375
+      value: 1e-45
       objectReference: {fileID: 0}
     - target: {fileID: 10800000, guid: 11ab42927a7ebba428755ec66d7857df, type: 3}
       propertyPath: m_Color.r
@@ -2478,7 +2478,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh21360
+  m_Name: pb_Mesh31936
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2842,6 +2842,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myText: {fileID: 1400058216}
+--- !u!1 &1044442062 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1002705123656268, guid: d86ca2f4159e6a942abd8dfc52b38395,
+    type: 3}
+  m_PrefabInstance: {fileID: 841254257}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &1044442067
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1044442062}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300000, guid: 9a3b57f0a1248be419dd9c4d54748512, type: 3}
 --- !u!1 &1052783427 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1538974187357688, guid: 83e9a4cc29228e449b4e3c86a792e188,
@@ -3032,19 +3052,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 10800000, guid: ec9131e40dcdea048a8629e11b6bc485, type: 3}
       propertyPath: m_BoundingSphereOverride.w
-      value: 2.3510647e-38
+      value: 0.0000000016917647
       objectReference: {fileID: 0}
     - target: {fileID: 10800000, guid: ec9131e40dcdea048a8629e11b6bc485, type: 3}
       propertyPath: m_BoundingSphereOverride.x
-      value: 0
+      value: 6.205648e-32
       objectReference: {fileID: 0}
     - target: {fileID: 10800000, guid: ec9131e40dcdea048a8629e11b6bc485, type: 3}
       propertyPath: m_BoundingSphereOverride.y
-      value: 2.3510647e-38
+      value: 3.6581934e+9
       objectReference: {fileID: 0}
     - target: {fileID: 10800000, guid: ec9131e40dcdea048a8629e11b6bc485, type: 3}
       propertyPath: m_BoundingSphereOverride.z
-      value: 0
+      value: -0.000004418346
       objectReference: {fileID: 0}
     - target: {fileID: 10800000, guid: ec9131e40dcdea048a8629e11b6bc485, type: 3}
       propertyPath: m_Color.r
@@ -8075,7 +8095,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh21566
+  m_Name: pb_Mesh32142
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -8319,15 +8339,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 10800000, guid: 050589558d1eca446a29d5dba20e1ff2, type: 3}
       propertyPath: m_BoundingSphereOverride.y
-      value: 4.75608e-15
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 10800000, guid: 050589558d1eca446a29d5dba20e1ff2, type: 3}
       propertyPath: m_BoundingSphereOverride.z
-      value: 1e-45
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 10800000, guid: 050589558d1eca446a29d5dba20e1ff2, type: 3}
       propertyPath: m_BoundingSphereOverride.w
-      value: 1.8019267e+31
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 10800000, guid: 050589558d1eca446a29d5dba20e1ff2, type: 3}
       propertyPath: m_Color.r
@@ -8547,7 +8567,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh21580
+  m_Name: pb_Mesh32156
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -8710,7 +8730,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh21484
+  m_Name: pb_Mesh32060
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -10746,7 +10766,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh21466
+  m_Name: pb_Mesh32042
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -10935,7 +10955,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh21294
+  m_Name: pb_Mesh31870
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -11468,7 +11488,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh21512
+  m_Name: pb_Mesh32088
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
