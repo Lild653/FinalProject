@@ -9,13 +9,13 @@ public class HintStuff : MonoBehaviour
     private string[] hints;
     private Text mytext;
     private int cats = 0;
-   
+    public GameObject gameManager;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        //cats = GetComponent<GameManager>().lastPuzzleSolved;
+        cats = gameManager.GetComponent<GameManager>().lastPuzzleSolved;
         hints = new string[3];
         hints[0] = "Find kind to unlock";
         hints[1] = "Know your ABC's";
