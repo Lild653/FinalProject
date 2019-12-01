@@ -27,8 +27,8 @@ public class HintStuff : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-    
+
+        Debug.Log(cats);
        
         
         if (Input.GetKeyDown(KeyCode.H))
@@ -52,10 +52,10 @@ public class HintStuff : MonoBehaviour
             gameObject.GetComponent<Text>().enabled = true;
 
         }
-        else
-        {
-            gameObject.GetComponent<Text>().enabled = true;
-        }
+        //else
+        //{
+          //  gameObject.GetComponent<Text>().enabled = true;
+        //}
         
 
         

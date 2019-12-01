@@ -8,6 +8,7 @@ TagManager:
   - Wires
   - Lights
   - NewHint
+  - Plate
   layers:
   - Default
   - TransparentFX
