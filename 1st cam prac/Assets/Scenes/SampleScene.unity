@@ -960,6 +960,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da690e5a9d2f24382928351e901409a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 1803039261}
 --- !u!1 &464082519 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1693633287523976, guid: 83e9a4cc29228e449b4e3c86a792e188,
@@ -2030,15 +2031,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 458986, guid: 67b0685a76617c84b94a58742fdf5e77, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 9.99
+      value: -1.59
       objectReference: {fileID: 0}
     - target: {fileID: 458986, guid: 67b0685a76617c84b94a58742fdf5e77, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.4055066
+      value: 4.367
       objectReference: {fileID: 0}
     - target: {fileID: 458986, guid: 67b0685a76617c84b94a58742fdf5e77, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -24.12
+      value: -19.16
       objectReference: {fileID: 0}
     - target: {fileID: 458986, guid: 67b0685a76617c84b94a58742fdf5e77, type: 3}
       propertyPath: m_LocalRotation.x
@@ -10772,6 +10773,51 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &1803039261
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1803039263}
+  - component: {fileID: 1803039262}
+  m_Layer: 0
+  m_Name: GameObject (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1803039262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1803039261}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd47401c2264b40aebf342aa85adbce3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lastPuzzleSolved: 0
+  lightsOn: 0
+--- !u!4 &1803039263
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1803039261}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5.646018, y: 5.8014894, z: -17.700676}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 29
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1812305981 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1149873592959164, guid: 83e9a4cc29228e449b4e3c86a792e188,
