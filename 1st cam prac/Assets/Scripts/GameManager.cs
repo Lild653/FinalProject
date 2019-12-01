@@ -7,8 +7,8 @@ public class GameManager : MonoBehaviour
 {
     private float startingSeconds = 245;
     private float secondsRemaining;
-    public Text myText;
     public int lastPuzzleSolved = 0;
+    public bool lightsOn;
     //private GameObject interact;
 
 
@@ -22,15 +22,15 @@ public class GameManager : MonoBehaviour
     {
 
         secondsRemaining = startingSeconds - Time.time;
-        int cats = Mathf.FloorToInt(secondsRemaining / 60);
-        int dogs = Mathf.FloorToInt(secondsRemaining - (cats * 60));
-        if (dogs < 10)
+        int minutes = Mathf.FloorToInt(secondsRemaining / 60);
+        int seconds = Mathf.FloorToInt(secondsRemaining - (minutes * 60));
+        if (seconds < 10)
         {
-            myText.text = "Time remaining: " + cats.ToString() + ":0" + dogs.ToString();
+            print("Time remaining: " + minutes.ToString() + ":0" + seconds.ToString());
         }
         else
         {
-            myText.text = "Time remaining: " + cats.ToString() + ":" + dogs.ToString();
+            print("Time remaining: " + minutes.ToString() + ":" + seconds.ToString());
         }
 
     }

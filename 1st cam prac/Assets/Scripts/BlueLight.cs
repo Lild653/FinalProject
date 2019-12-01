@@ -58,10 +58,10 @@ public class BlueLight : MonoBehaviour
             foreach(GameObject girly in helper)
             {
                 girly.GetComponentInChildren<Light>().enabled = true;
-                //gameManager.GetComponent<GameManager>.lastPuzzleSolved = 2;
+                gameManager.GetComponent<GameManager>().lastPuzzleSolved = 2;
                
             }
-            
+            gameManager.GetComponent<GameManager>().lightsOn = true;
         }
         else
         {
