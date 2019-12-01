@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
     private float startingSeconds = 245;
     private float secondsRemaining;
     public Text myText;
-    public int lastPuzzleSolved = -1;
+    public int lastPuzzleSolved = 0;
     //private GameObject interact;
 
 
