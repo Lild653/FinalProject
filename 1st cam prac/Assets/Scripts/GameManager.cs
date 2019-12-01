@@ -26,11 +26,11 @@ public class GameManager : MonoBehaviour
         int seconds = Mathf.FloorToInt(secondsRemaining - (minutes * 60));
         if (seconds < 10)
         {
-            print("Time remaining: " + minutes.ToString() + ":0" + seconds.ToString());
+            //print("Time remaining: " + minutes.ToString() + ":0" + seconds.ToString());
         }
         else
         {
-            print("Time remaining: " + minutes.ToString() + ":" + seconds.ToString());
+            //print("Time remaining: " + minutes.ToString() + ":" + seconds.ToString());
         }
 
     }

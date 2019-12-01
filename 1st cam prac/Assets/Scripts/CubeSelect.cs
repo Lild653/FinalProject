@@ -26,14 +26,15 @@ public class CubeSelect : MonoBehaviour
        
 
         System.Boolean objetoHit = Physics.Raycast(Camera.main.ScreenPointToRay(new Vector3((0.5f) * Screen.width, (0.5f)* Screen.height,0)), out vision);
-
+        
         
         if (objetoHit)
         {
-            if (vision.collider.name == "Plate")
+            //if (vision.collider.tag == "Pickup")
+            if(vision.collider.gameObject.CompareTag("Pickup"))
             {
-            
 
+                print("Press F");
                 interactive.enabled=true;
                 if (Input.GetKey(KeyCode.F))
                 {

@@ -9,6 +9,7 @@ TagManager:
   - Lights
   - NewHint
   - Plate
+  - Pickup
   layers:
   - Default
   - TransparentFX
