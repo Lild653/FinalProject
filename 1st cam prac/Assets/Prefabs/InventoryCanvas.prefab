@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 621390590715148893}
   - component: {fileID: 5177513488969976015}
   m_Layer: 5
-  m_Name: lock
+  m_Name: Baseball bat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30,7 +30,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 787400531260642911}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -187,11 +187,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33f927e3d461d4cb1905502802c4eb58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  image1: {fileID: 6757983846000819510}
-  image2: {fileID: 2541117156514805176}
-  image3: {fileID: 1261670102533073268}
-  image4: {fileID: 2384140015205164856}
-  image5: {fileID: 6153150117157517784}
+  images: []
 --- !u!1 &2384140015205164856
 GameObject:
   m_ObjectHideFlags: 0
@@ -204,7 +200,7 @@ GameObject:
   - component: {fileID: 3437324336302069356}
   - component: {fileID: 6615538821356621903}
   m_Layer: 5
-  m_Name: letter
+  m_Name: Letter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -222,7 +218,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 787400531260642911}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -279,7 +275,7 @@ GameObject:
   - component: {fileID: 2675483849347355019}
   - component: {fileID: 8823887747327235493}
   m_Layer: 5
-  m_Name: key
+  m_Name: Key
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -373,8 +369,8 @@ RectTransform:
   m_Children:
   - {fileID: 4337093983957998470}
   - {fileID: 259063706770205334}
-  - {fileID: 5973147985243841590}
   - {fileID: 2296271458761972357}
+  - {fileID: 5973147985243841590}
   - {fileID: 7337357299005334923}
   m_Father: {fileID: 2702915785867171581}
   m_RootOrder: 0
@@ -434,7 +430,7 @@ GameObject:
   - component: {fileID: 6002259668666823062}
   - component: {fileID: 8186673476819088099}
   m_Layer: 5
-  m_Name: wirebox
+  m_Name: Scissors
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -509,7 +505,7 @@ GameObject:
   - component: {fileID: 5468869414238902982}
   - component: {fileID: 8765524832659706429}
   m_Layer: 5
-  m_Name: flashlight
+  m_Name: Flashlight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
