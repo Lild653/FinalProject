@@ -2745,7 +2745,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh114426
+  m_Name: pb_Mesh126342
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -5122,6 +5122,7 @@ GameObject:
   - component: {fileID: 1249529371}
   - component: {fileID: 1249529372}
   - component: {fileID: 1249529373}
+  - component: {fileID: 1249529374}
   m_Layer: 0
   m_Name: UnlockBoxParent
   m_TagString: Untagged
@@ -5136,7 +5137,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1249529370}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.32956544, y: 6.203759, z: -21.859644}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -5178,6 +5179,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   locked: {fileID: 1096526041}
   unlocked: {fileID: 2085074132}
+--- !u!64 &1249529374
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1249529370}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 0}
 --- !u!1 &1249862789 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1261670102533073268, guid: 737edd361974f4084a25780f710cc52f,

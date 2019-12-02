@@ -43,6 +43,10 @@ public class CubeSelect : MonoBehaviour
                     inventoryCanvas.GetComponent<Inventory>().OnCollect(vision.collider.gameObject);
                 }
             }
+            //if (vision.collider.name.Equals("UnlockBoxParent"))
+            //{
+            //    vision.collider.GetComponent<WireBox>().Unlock();
+            //}
             else
             {
                 interactive.enabled = false;
