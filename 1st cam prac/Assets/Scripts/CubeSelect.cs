@@ -34,7 +34,7 @@ public class CubeSelect : MonoBehaviour
             if(vision.collider.CompareTag("Pickup"))
             {
 
-                print("Press F");
+                print("Press F to pick up");
                 interactive.enabled=true;
                 if (Input.GetKey(KeyCode.F))
                 {
@@ -43,10 +43,23 @@ public class CubeSelect : MonoBehaviour
                     inventoryCanvas.GetComponent<Inventory>().OnCollect(vision.collider.gameObject);
                 }
             }
-            //if (vision.collider.name.Equals("UnlockBoxParent"))
-            //{
-            //    vision.collider.GetComponent<WireBox>().Unlock();
-            //}
+            if (vision.collider.CompareTag("Interact"))
+            {
+                print(vision.collider.name);
+                if (Input.GetKey(KeyCode.F))
+                {
+                    print("Press F to interact");
+                    if (vision.collider.name.Equals("UnlockBoxParent") && inventoryCanvas.GetComponent<Inventory>().inventorymap["Key"])
+                    {
+                        vision.collider.GetComponent<WireBox>().Unlock();
+                    }
+                    if (vision.collider.name.Equals("Plate") || vision.collider.name.Equals("lock_1_open") && inventoryCanvas.GetComponent<Inventory>().inventorymap["Key"]) {
+                        vision.collider.GetComponentInParent<WireBox>().Unlock();
+                    }
+                }
+                
+            }
+          
             else
             {
                 interactive.enabled = false;
