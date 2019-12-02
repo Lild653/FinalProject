@@ -80,7 +80,7 @@ public class Inventory : MonoBehaviour
                 }
             }
         }
-        inventorymap.Add(myObject.name, true);
+        inventorymap[myObject.name] = true;
         Destroy(myObject);
     }
 
