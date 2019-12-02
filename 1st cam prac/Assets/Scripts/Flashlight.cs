@@ -22,4 +22,9 @@ public class Flashlight : MonoBehaviour
     {
         myLight.enabled = true;
     }
+
+    public void TurnOff()
+    {
+        myLight.enabled = false;
+    }
 }
