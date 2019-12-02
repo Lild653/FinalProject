@@ -7,6 +7,7 @@ public class WireBox : MonoBehaviour
     Animator unlockBoxAnimate;
     public GameObject locked;
     public GameObject unlocked;
+    public GameObject gameManager;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,6 +17,7 @@ public class WireBox : MonoBehaviour
 
     public void Unlock()
     {
+        gameManager.GetComponent<GameManager>().lastPuzzleSolved = 1;
         locked.SetActive(false);
         unlocked.SetActive(true);
         unlockBoxAnimate.SetTrigger("UnlockBox");
