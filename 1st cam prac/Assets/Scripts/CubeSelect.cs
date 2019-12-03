@@ -14,13 +14,13 @@ public class CubeSelect : MonoBehaviour
     public GameObject[] Pickupitems;
     private RaycastHit vision;
 
-   
+
     // Start is called before the first frame update
     void Start()
     {
         interactive.enabled = false;
-        
-        
+
+
     }
 
     // Update is called once per frame
@@ -44,7 +44,8 @@ public class CubeSelect : MonoBehaviour
             {
                 interactive.enabled = true;
                 int dogs = newList.IndexOf(cats);
-                if (Input.GetKey(KeyCode.F)) {
+                if (Input.GetKey(KeyCode.F))
+                {
                     newList.Remove(cats);
 
                     inventoryCanvas.GetComponent<Inventory>().OnCollect(cats);
@@ -148,7 +149,8 @@ public class CubeSelect : MonoBehaviour
                     {
                         vision.collider.GetComponent<WireBox>().Unlock();
                     }
-                    if (vision.collider.name.Equals("Plate") || vision.collider.name.Equals("lock_1_open") && inventoryCanvas.GetComponent<Inventory>().inventorymap["Key"]) {
+                    if (vision.collider.name.Equals("Plate") || vision.collider.name.Equals("lock_1_open") && inventoryCanvas.GetComponent<Inventory>().inventorymap["Key"])
+                    {
                         vision.collider.GetComponentInParent<WireBox>().Unlock();
                     }
                     if (vision.collider.name.Equals("Sofa"))
@@ -168,4 +170,5 @@ public class CubeSelect : MonoBehaviour
 
         }
     }
+}
         
