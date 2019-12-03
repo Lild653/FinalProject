@@ -48,7 +48,7 @@ public class Wiring : MonoBehaviour
     private void Update()
     {
     
-        System.Boolean objeto = Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out mouseLocal);
+        System.Boolean objeto = Physics.Raycast(Camera.main.ScreenPointToRay(new Vector3(.5f * Screen.width, .65f * Screen.height, 0)), out mouseLocal);
         if (objeto && mouseLocal.collider.gameObject == gameObject && Input.GetKeyDown(KeyCode.A)) 
         {
 

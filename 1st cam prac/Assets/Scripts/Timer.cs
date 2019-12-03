@@ -1,14 +1,14 @@
-﻿//using System.Collections;
-//using System.Collections.Generic;
-//using UnityEngine;
-//using UnityEngine.UI;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
 
 public class Timer : MonoBehaviour
 {
     // Start is called before the first frame update
     private float startingSeconds = 245;
     private float secondsRemaining;
-    public Text myText;
+    //public Text myText;
     
     
    
@@ -34,4 +34,4 @@ public class Timer : MonoBehaviour
 //        }
         
 //    }
-//}
+}

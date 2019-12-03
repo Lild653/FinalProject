@@ -7,15 +7,16 @@ public class HintStuff : MonoBehaviour
 {
     //public GameObject hintDisplay = GameObject.FindGameObjectWithTag("NewHint");
     private string[] hints;
-    private Text mytext;
-    private int cats;
+    public Text mytext;
+    private int puzzleNumber;
     public GameObject gameManager;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        cats = gameManager.GetComponent<GameManager>().lastPuzzleSolved;
+        
+        gameObject.GetComponent<Text>().enabled = false;
         hints = new string[3];
         hints[0] = "Find key to unlock";
         hints[1] = "Know your ABC's";
@@ -27,24 +28,21 @@ public class HintStuff : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-
-       
-        
+        puzzleNumber = gameManager.GetComponent<GameManager>().lastPuzzleSolved;
         if (Input.GetKeyDown(KeyCode.H))
         {
-            switch (cats)
+            switch (puzzleNumber)
             {
                 case 0:
                     mytext.text = hints[0];
                     break;
 
                 case 1:
-                    mytext.text = hints[0];
+                    mytext.text = hints[1];
                     break;
 
                 case 2:
-                    mytext.text = hints[0];
+                    mytext.text = hints[2];
                     break;
 
             }
@@ -53,13 +51,9 @@ public class HintStuff : MonoBehaviour
 
         }
 
-        else
+        else if (Input.GetKeyUp(KeyCode.H))
         {
-           gameObject.GetComponent<Text>().enabled = true;
+           gameObject.GetComponent<Text>().enabled = false;
         }
-        
-
-        
-        
     }
 }

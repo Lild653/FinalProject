@@ -11,18 +11,30 @@ public class GameManager : MonoBehaviour
     public int lastPuzzleSolved = 0;
     public bool lightsOn;
     public Text myText;
-    //private GameObject interact;
+    public Canvas inventoryCanvas;
 
 
     void Start()
     {
+        
         //interact = gameObject;
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        if(lightsOn)
+        {
+            lastPuzzleSolved= 2;
+        }
+        else if(!lightsOn && inventoryCanvas.GetComponent<Inventory>().inventorymap["Key"])
+        {
+            lastPuzzleSolved = 1;
+        }
+        else
+        {
+            lastPuzzleSolved = 0;
+        }
         secondsRemaining = startingSeconds - Time.time;
         int minutes = Mathf.FloorToInt(secondsRemaining / 60);
         int seconds = Mathf.FloorToInt(secondsRemaining - (minutes * 60));
@@ -39,6 +51,15 @@ public class GameManager : MonoBehaviour
             LostGame();
         }
 
+    }
+
+    
+    public void puzzleNumber()
+    {
+        if (lightsOn)
+        {
+            lastPuzzleSolved += 1;
+        }
     }
 
     public void LostGame()
