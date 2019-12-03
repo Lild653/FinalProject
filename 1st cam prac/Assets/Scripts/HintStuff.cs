@@ -8,7 +8,7 @@ public class HintStuff : MonoBehaviour
     //public GameObject hintDisplay = GameObject.FindGameObjectWithTag("NewHint");
     private string[] hints;
     private Text mytext;
-    private int cats = 0;
+    private int cats;
     public GameObject gameManager;
 
 
@@ -28,7 +28,7 @@ public class HintStuff : MonoBehaviour
     void Update()
     {
 
-        Debug.Log(cats);
+
        
         
         if (Input.GetKeyDown(KeyCode.H))
@@ -52,10 +52,11 @@ public class HintStuff : MonoBehaviour
             gameObject.GetComponent<Text>().enabled = true;
 
         }
-        //else
-        //{
-          //  gameObject.GetComponent<Text>().enabled = true;
-        //}
+
+        else
+        {
+           gameObject.GetComponent<Text>().enabled = true;
+        }
         
 
         
