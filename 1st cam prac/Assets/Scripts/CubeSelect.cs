@@ -41,18 +41,16 @@ public class CubeSelect : MonoBehaviour
         {
             if (Vector3.Angle(transform.forward, currObject.transform.position - transform.position) < 15 && Math.Abs(currObject.transform.position.z-transform.position.z)<2.5)
             {
+                print(inventoryCanvas.GetComponent<Inventory>().inventorymap["Key"]);
                 interactive.enabled = true;
                 if (Input.GetKey(KeyCode.F))
                 {
+                    
                     if (currObject.CompareTag("Interact"))
                     {
                         if (currObject.name.Equals("UnlockBoxParent") && inventoryCanvas.GetComponent<Inventory>().inventorymap["Key"])
                         {
                             currObject.GetComponent<WireBox>().Unlock();
-                        }
-                        if (currObject.name.Equals("Plate") || currObject.name.Equals("lock_1_open") && inventoryCanvas.GetComponent<Inventory>().inventorymap["Key"])
-                        {
-                            currObject.GetComponentInParent<WireBox>().Unlock();
                         }
                         if (currObject.name.Equals("Sofa"))
                         {
