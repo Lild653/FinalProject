@@ -9,7 +9,7 @@ public class Timer : MonoBehaviour
     private float startingSeconds = 245;
     private float secondsRemaining;
     public Text myText;
-    //private GameObject interact;
+    
     
    
     void Start()

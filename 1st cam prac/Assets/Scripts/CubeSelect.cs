@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -28,8 +29,6 @@ public class CubeSelect : MonoBehaviour
     {
 
 
-
-
         //System.Boolean objetoHit = Physics.Raycast(Camera.main.ScreenPointToRay(new Vector3((0.5f) * Screen.width, (0.5f)* Screen.height,0)), out vision);
 
         ArrayList newList = new ArrayList();
@@ -38,138 +37,55 @@ public class CubeSelect : MonoBehaviour
             newList.Add(items);
         }
 
-        foreach (GameObject cats in Pickupitems)
+        foreach (GameObject currObject in Pickupitems)
         {
-            if (Vector3.Angle(transform.forward, cats.transform.position - transform.position) < 15)
+            if (Vector3.Angle(transform.forward, currObject.transform.position - transform.position) < 15 && Math.Abs(currObject.transform.position.z-transform.position.z)<2.5)
             {
-                interactive.enabled = true;
-                int dogs = newList.IndexOf(cats);
-                if (Input.GetKey(KeyCode.F))
-                {
-                    newList.Remove(cats);
-
-                    inventoryCanvas.GetComponent<Inventory>().OnCollect(cats);
-
-                    Pickupitems = new GameObject[newList.Count];
-                    for (int i = 0; i < newList.Count; i++)
-                    {
-                        Pickupitems[i] = (UnityEngine.GameObject)newList[i];
-                    }
-
-
-                }
-            }
-
-
-        }
-
-
-
-        /*
-        if (objetoHit)
-        {
-            //if (vision.collider.tag == "Pickup")
-            if(vision.collider.CompareTag("Pickup"))
-            {
-
-                print("Press F to pick up");
-                interactive.enabled=true;
-                if (Input.GetKey(KeyCode.F))
-                {
-
-                    Destroy(vision.collider.gameObject);
-                    inventoryCanvas.GetComponent<Inventory>().OnCollect(vision.collider.gameObject);
-                }
-            }
-            if (vision.collider.CompareTag("Interact"))
-            {
-                if (Input.GetKey(KeyCode.F))
-                {
-                    print("Press F to interact");
-                    if (vision.collider.name.Equals("UnlockBoxParent") && inventoryCanvas.GetComponent<Inventory>().inventorymap["Key"])
-                    {
-                        vision.collider.GetComponent<WireBox>().Unlock();
-                    }
-                    if (vision.collider.name.Equals("Plate") || vision.collider.name.Equals("lock_1_open") && inventoryCanvas.GetComponent<Inventory>().inventorymap["Key"]) {
-                        vision.collider.GetComponentInParent<WireBox>().Unlock();
-                    }
-                    //if (vision.collider.name.Equals("Bed"))
-                    //{
-                        
-                    //}
-                }
-                
-            }
-          
-            else
-            {
-                interactive.enabled = false;
-            }
-
-
-
-  
-
-
-
-        else
-        {
-            interactive.enabled = false;
-        }
-
-      */
-
-
-
-
-        System.Boolean objetoHit = Physics.Raycast(Camera.main.ScreenPointToRay(new Vector3((0.5f) * Screen.width, (0.5f) * Screen.height, 0)), out vision);
-
-
-        if (objetoHit)
-        {
-            //if (vision.collider.tag == "Pickup")
-            if (vision.collider.CompareTag("Pickup"))
-            {
-
-                print("Press F to pick up");
                 interactive.enabled = true;
                 if (Input.GetKey(KeyCode.F))
                 {
+                    if (currObject.CompareTag("Interact"))
+                    {
+                        if (currObject.name.Equals("UnlockBoxParent") && inventoryCanvas.GetComponent<Inventory>().inventorymap["Key"])
+                        {
+                            currObject.GetComponent<WireBox>().Unlock();
+                        }
+                        if (currObject.name.Equals("Plate") || currObject.name.Equals("lock_1_open") && inventoryCanvas.GetComponent<Inventory>().inventorymap["Key"])
+                        {
+                            currObject.GetComponentInParent<WireBox>().Unlock();
+                        }
+                        if (currObject.name.Equals("Sofa"))
+                        {
+                            newList.Remove(currObject);
+                            key.GetComponent<Animator>().SetTrigger("CollectKey");
+                            inventoryCanvas.GetComponent<Inventory>().OnCollect(key);
+                            Pickupitems = new GameObject[newList.Count];
+                            for (int i = 0; i < newList.Count; i++)
+                            {
+                                Pickupitems[i] = (UnityEngine.GameObject)newList[i];
+                            }
+                        }
+                    }
 
-                    Destroy(vision.collider.gameObject);
-                    inventoryCanvas.GetComponent<Inventory>().OnCollect(vision.collider.gameObject);
+                    else if (currObject.CompareTag("Pickup"))
+                    {
+                        newList.Remove(currObject);
+                        inventoryCanvas.GetComponent<Inventory>().OnCollect(currObject);
+
+                        Pickupitems = new GameObject[newList.Count];
+                        for (int i = 0; i < newList.Count; i++)
+                        {
+                            Pickupitems[i] = (UnityEngine.GameObject)newList[i];
+                        }
+                    }
+
+
                 }
             }
-            if (vision.collider.CompareTag("Interact"))
-            {
-                print("here");
-                if (Input.GetKey(KeyCode.F))
-                {
-                    print("Press F to interact");
-                    if (vision.collider.name.Equals("UnlockBoxParent") && inventoryCanvas.GetComponent<Inventory>().inventorymap["Key"])
-                    {
-                        vision.collider.GetComponent<WireBox>().Unlock();
-                    }
-                    if (vision.collider.name.Equals("Plate") || vision.collider.name.Equals("lock_1_open") && inventoryCanvas.GetComponent<Inventory>().inventorymap["Key"])
-                    {
-                        vision.collider.GetComponentInParent<WireBox>().Unlock();
-                    }
-                    if (vision.collider.name.Equals("Sofa"))
-                    {
-                        key.GetComponent<Animator>().SetTrigger("CollectKey");
-                        inventoryCanvas.GetComponent<Inventory>().OnCollect(key);
-                    }
-                }
-
-            }
-
-            else
-            {
-                interactive.enabled = false;
-            }
+        
 
 
         }
+
     }
 }
-        

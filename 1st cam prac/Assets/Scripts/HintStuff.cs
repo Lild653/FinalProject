@@ -17,7 +17,7 @@ public class HintStuff : MonoBehaviour
     {
         cats = gameManager.GetComponent<GameManager>().lastPuzzleSolved;
         hints = new string[3];
-        hints[0] = "Find kind to unlock";
+        hints[0] = "Find key to unlock";
         hints[1] = "Know your ABC's";
         hints[2] = "Last sentence of letter";
 
