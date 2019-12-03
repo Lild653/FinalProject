@@ -45,7 +45,6 @@ public class CubeSelect : MonoBehaviour
             }
             if (vision.collider.CompareTag("Interact"))
             {
-                print(vision.collider.name);
                 if (Input.GetKey(KeyCode.F))
                 {
                     print("Press F to interact");
@@ -56,6 +55,10 @@ public class CubeSelect : MonoBehaviour
                     if (vision.collider.name.Equals("Plate") || vision.collider.name.Equals("lock_1_open") && inventoryCanvas.GetComponent<Inventory>().inventorymap["Key"]) {
                         vision.collider.GetComponentInParent<WireBox>().Unlock();
                     }
+                    //if (vision.collider.name.Equals("Bed"))
+                    //{
+                        
+                    //}
                 }
                 
             }

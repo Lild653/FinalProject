@@ -729,15 +729,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1ea53ae0f8f75dc428c7fadfbe676433, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.17
+      value: -0.985
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1ea53ae0f8f75dc428c7fadfbe676433, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.321
+      value: 4.336
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1ea53ae0f8f75dc428c7fadfbe676433, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -19.21
+      value: -21.56
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1ea53ae0f8f75dc428c7fadfbe676433, type: 3}
       propertyPath: m_LocalRotation.x
@@ -2194,7 +2194,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 194242, guid: 46aad46494938c844a7bfbbcb53b98e1, type: 3}
       propertyPath: m_Name
-      value: Prop_Bed_A
+      value: Bed
       objectReference: {fileID: 0}
     - target: {fileID: 439586, guid: 46aad46494938c844a7bfbbcb53b98e1, type: 3}
       propertyPath: m_LocalPosition.x
