@@ -11,6 +11,7 @@ public class CubeSelect : MonoBehaviour
     public Canvas interactive;
     public Canvas inventoryCanvas;
     public GameObject key;
+    public GameObject[] Pickupitems;
     private RaycastHit vision;
 
    
@@ -45,17 +46,17 @@ public class CubeSelect : MonoBehaviour
                 int dogs = newList.IndexOf(cats);
                 if (Input.GetKey(KeyCode.F)) {
                     newList.Remove(cats);
-                   
+
                     inventoryCanvas.GetComponent<Inventory>().OnCollect(cats);
 
                     Pickupitems = new GameObject[newList.Count];
-                    for(int i= 0;i<newList.Count;i++) 
+                    for (int i = 0; i < newList.Count; i++)
                     {
                         Pickupitems[i] = (UnityEngine.GameObject)newList[i];
                     }
-                    
 
-                    }
+
+                }
             }
 
 
@@ -116,23 +117,21 @@ public class CubeSelect : MonoBehaviour
         }
 
       */
-     
-
-    }
-}
 
 
-        System.Boolean objetoHit = Physics.Raycast(Camera.main.ScreenPointToRay(new Vector3((0.5f) * Screen.width, (0.5f)* Screen.height,0)), out vision);
-        
-        
+
+
+        System.Boolean objetoHit = Physics.Raycast(Camera.main.ScreenPointToRay(new Vector3((0.5f) * Screen.width, (0.5f) * Screen.height, 0)), out vision);
+
+
         if (objetoHit)
         {
             //if (vision.collider.tag == "Pickup")
-            if(vision.collider.CompareTag("Pickup"))
+            if (vision.collider.CompareTag("Pickup"))
             {
 
                 print("Press F to pick up");
-                interactive.enabled=true;
+                interactive.enabled = true;
                 if (Input.GetKey(KeyCode.F))
                 {
 
@@ -158,27 +157,15 @@ public class CubeSelect : MonoBehaviour
                         inventoryCanvas.GetComponent<Inventory>().OnCollect(key);
                     }
                 }
-                
+
             }
-          
+
             else
             {
                 interactive.enabled = false;
             }
 
 
-
-
-
-
         }
-        else
-        {
-            interactive.enabled = false;
-        }
-        
-
     }
         
-    }
-
