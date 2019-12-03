@@ -1,7 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
+﻿//using System.Collections;
+//using System.Collections.Generic;
+//using UnityEngine;
+//using UnityEngine.UI;
 
 public class Timer : MonoBehaviour
 {
@@ -17,21 +17,21 @@ public class Timer : MonoBehaviour
         //interact = gameObject;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
+//    // Update is called once per frame
+//    void Update()
+//    {
         
-        secondsRemaining = startingSeconds - Time.time;
-        int cats = Mathf.FloorToInt(secondsRemaining / 60);
-        int dogs = Mathf.FloorToInt(secondsRemaining - (cats * 60));
-        if (dogs < 10)
-        {
-            myText.text = "Time remaining: " + cats.ToString() + ":0" + dogs.ToString();
-        }
-        else
-        {
-            myText.text = "Time remaining: " + cats.ToString() + ":" + dogs.ToString();
-        }
+//        secondsRemaining = startingSeconds - Time.time;
+//        int cats = Mathf.FloorToInt(secondsRemaining / 60);
+//        int dogs = Mathf.FloorToInt(secondsRemaining - (cats * 60));
+//        if (dogs < 10)
+//        {
+//            myText.text = "Time remaining: " + cats.ToString() + ":0" + dogs.ToString();
+//        }
+//        else
+//        {
+//            myText.text = "Time remaining: " + cats.ToString() + ":" + dogs.ToString();
+//        }
         
-    }
-}
+//    }
+//}

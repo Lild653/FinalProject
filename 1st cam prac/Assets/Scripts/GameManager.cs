@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class GameManager : MonoBehaviour
     private float secondsRemaining;
     public int lastPuzzleSolved = 0;
     public bool lightsOn;
+    public Text myText;
     //private GameObject interact;
 
 
@@ -26,12 +28,28 @@ public class GameManager : MonoBehaviour
         int seconds = Mathf.FloorToInt(secondsRemaining - (minutes * 60));
         if (seconds < 10)
         {
-            //print("Time remaining: " + minutes.ToString() + ":0" + seconds.ToString());
+            myText.text = "Time remaining: " + minutes.ToString() + ":0" + seconds.ToString();
         }
         else
         {
-            //print("Time remaining: " + minutes.ToString() + ":" + seconds.ToString());
+            myText.text = "Time remaining: " + minutes.ToString() + ":" + seconds.ToString();
+        }
+        if (seconds <= 0)
+        {
+            LostGame();
         }
 
     }
+
+    public void LostGame()
+    {
+
+    }
+
+    public void WonGame()
+    {
+
+    }
+
+
 }
