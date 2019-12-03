@@ -142,6 +142,7 @@ public class CubeSelect : MonoBehaviour
             }
             if (vision.collider.CompareTag("Interact"))
             {
+                print("here");
                 if (Input.GetKey(KeyCode.F))
                 {
                     print("Press F to interact");
