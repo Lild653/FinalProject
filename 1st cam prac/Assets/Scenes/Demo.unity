@@ -11436,6 +11436,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lastPuzzleSolved: 0
   lightsOn: 0
+  myText: {fileID: 1400058216}
 --- !u!4 &1803039263
 Transform:
   m_ObjectHideFlags: 0
