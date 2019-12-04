@@ -17,7 +17,7 @@ public class WireBox : MonoBehaviour
 
     public void Unlock()
     {
-        gameManager.GetComponent<GameManager>().lastPuzzleSolved = 1;
+        gameManager.GetComponent<GameManager>().lastPuzzleSolved = 0;
         locked.SetActive(false);
         unlocked.SetActive(true);
         unlockBoxAnimate.SetTrigger("UnlockBox");

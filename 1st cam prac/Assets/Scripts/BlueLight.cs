@@ -69,7 +69,7 @@ public class BlueLight : MonoBehaviour
             }
             myLight.GetComponent<Flashlight>().TurnOff();
             gameManager.GetComponent<GameManager>().lightsOn = true;
-            //gameManager.GetComponent<GameManager>().lastPuzzleSolved = 2;
+            gameManager.GetComponent<GameManager>().lastPuzzleSolved = 1;
         }
         else
         {
