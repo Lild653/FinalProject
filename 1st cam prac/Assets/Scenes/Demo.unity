@@ -3601,8 +3601,8 @@ MonoBehaviour:
   key: {fileID: 867315390}
   Pickupitems:
   - {fileID: 1033921573}
+  - {fileID: 867315390}
   - {fileID: 1249529370}
-  - {fileID: 1096526041}
   - {fileID: 1044442062}
   - {fileID: 284958308}
   - {fileID: 1260059851}
