@@ -1,18 +1,24 @@
-﻿////using System.Collections;
-////using System.Collections.Generic;
-////using UnityEngine;
-////using UnityEngine.UI;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
 
-//public class Timer : MonoBehaviour
-//{
-//    // Start is called before the first frame update
-//    private float startingSeconds = 245;
-//    private float secondsRemaining;
-//    public Text myText;
+public class Timer : MonoBehaviour
+{
+    // Start is called before the first frame update
+    private float startingSeconds = 245;
+    private float secondsRemaining;
+    //public Text myText;
     
     
    
-//    void Start()
+    void Start()
+    {
+        //interact = gameObject;
+    }
+
+//    // Update is called once per frame
+//    void Update()
 //    {
 //        //interact = gameObject;
 //    }
@@ -33,5 +39,5 @@
 ////            myText.text = "Time remaining: " + cats.ToString() + ":" + dogs.ToString();
 ////        }
         
-////    }
-////}
+//    }
+}

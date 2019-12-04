@@ -11,7 +11,6 @@ public class BlueLight : MonoBehaviour
     public GameObject gameManager;
     public Light myLight;
     private Color [] properColors;
-
     private new Color renderer;
     
 
@@ -70,7 +69,7 @@ public class BlueLight : MonoBehaviour
             }
             myLight.GetComponent<Flashlight>().TurnOff();
             gameManager.GetComponent<GameManager>().lightsOn = true;
-            gameManager.GetComponent<GameManager>().lastPuzzleSolved = 2;
+            //gameManager.GetComponent<GameManager>().lastPuzzleSolved = 2;
         }
         else
         {
