@@ -13,6 +13,7 @@ public class CubeSelect : MonoBehaviour
     public Canvas inventoryCanvas;
     public GameObject key;
     public GameObject[] Pickupitems;
+    public GameObject gameManager;
     private RaycastHit vision;
 
 
@@ -43,7 +44,7 @@ public class CubeSelect : MonoBehaviour
             {
                 print(inventoryCanvas.GetComponent<Inventory>().inventorymap["Key"]);
                 interactive.enabled = true;
-                if (Input.GetKey(KeyCode.F))
+                if (Input.GetKey(KeyCode.F) && !gameManager.GetComponent<GameManager>().inputtingText)
                 {
                     
                     if (currObject.CompareTag("Interact"))
@@ -62,6 +63,14 @@ public class CubeSelect : MonoBehaviour
                             {
                                 Pickupitems[i] = (UnityEngine.GameObject)newList[i];
                             }
+                        }
+                        if (currObject.name.Equals("Kepad"))
+                        {
+                            currObject.GetComponent<KeypadLock>().EnterInput();
+                        }
+                        if (currObject.name.Equals("Door"))
+                        {
+                            currObject.GetComponentInChildren<KeypadLock>().EnterInput();
                         }
                     }
 

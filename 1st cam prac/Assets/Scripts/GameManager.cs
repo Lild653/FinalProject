@@ -6,11 +6,12 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    private float startingSeconds = 245;
+    private float startingSeconds = 900;
     private float secondsRemaining;
     public int lastPuzzleSolved = 0;
     public bool lightsOn;
     public Text myText;
+    public bool inputtingText = false;
     //private GameObject interact;
 
 
