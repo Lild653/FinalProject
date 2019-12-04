@@ -55,14 +55,17 @@ public class CubeSelect : MonoBehaviour
                         }
                         if (currObject.name.Equals("Sofa"))
                         {
-                            newList.Remove(currObject);
+                            
                             key.GetComponent<Animator>().SetTrigger("CollectKey");
+                            newList.Remove(key);
+                            newList.Remove(currObject);
                             inventoryCanvas.GetComponent<Inventory>().OnCollect(key);
                             Pickupitems = new GameObject[newList.Count];
                             for (int i = 0; i < newList.Count; i++)
                             {
                                 Pickupitems[i] = (UnityEngine.GameObject)newList[i];
                             }
+                            
                         }
                         if (currObject.name.Equals("Kepad"))
                         {
@@ -84,6 +87,7 @@ public class CubeSelect : MonoBehaviour
                         {
                             Pickupitems[i] = (UnityEngine.GameObject)newList[i];
                         }
+                        
                     }
 
 
