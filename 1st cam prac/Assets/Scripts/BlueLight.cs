@@ -9,6 +9,7 @@ public class BlueLight : MonoBehaviour
    
     public GameObject [] wireWatch;
     public GameObject gameManager;
+    public GameObject letter;
     public Light myLight;
     private Color [] properColors;
     private new Color renderer;
@@ -68,6 +69,7 @@ public class BlueLight : MonoBehaviour
                
             }
             myLight.GetComponent<Flashlight>().TurnOff();
+            letter.GetComponent<LetterScript>().BluelightLetter();
             gameManager.GetComponent<GameManager>().lightsOn = true;
             gameManager.GetComponent<GameManager>().lastPuzzleSolved = 1;
         }

@@ -42,7 +42,6 @@ public class CubeSelect : MonoBehaviour
         {
             if (Vector3.Angle(transform.forward, currObject.transform.position - transform.position) < 15 && Math.Abs(currObject.transform.position.z-transform.position.z)<2.5)
             {
-                print(inventoryCanvas.GetComponent<Inventory>().inventorymap["Key"]);
                 interactive.enabled = true;
                 if (Input.GetKey(KeyCode.F) && !gameManager.GetComponent<GameManager>().inputtingText)
                 {

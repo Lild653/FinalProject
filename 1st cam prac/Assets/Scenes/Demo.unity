@@ -3251,8 +3251,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   letterCanvas: {fileID: 1238208162}
+  inventory: {fileID: 1437573626}
   gameManager: {fileID: 1803039261}
-  letterText: {fileID: 0}
+  letterWithText: {fileID: 21300000, guid: 404ae6f089b86441ab3e64f8de163270, type: 3}
+  letterText: {fileID: 1864021869}
 --- !u!1 &827991812 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 194242, guid: 46aad46494938c844a7bfbbcb53b98e1,
@@ -3584,6 +3586,7 @@ MonoBehaviour:
   - {fileID: 2081630474}
   - {fileID: 1609632443}
   gameManager: {fileID: 1803039261}
+  letter: {fileID: 1737630632}
   myLight: {fileID: 529795498}
 --- !u!114 &963194231
 MonoBehaviour:
@@ -3608,6 +3611,7 @@ MonoBehaviour:
   - {fileID: 284958308}
   - {fileID: 1260059851}
   - {fileID: 2085074132}
+  - {fileID: 798003918}
   gameManager: {fileID: 1803039261}
 --- !u!1001 &974782611
 PrefabInstance:
@@ -6136,7 +6140,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 82476205e4c8d455baca93aba86e3ac2,
+      objectReference: {fileID: 21300000, guid: c5f4186846d044bd19010246f34e5040,
         type: 3}
     - target: {fileID: 8823887747327235493, guid: 737edd361974f4084a25780f710cc52f,
         type: 3}
@@ -10658,6 +10662,12 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300042, guid: 6f053ae833d41ef4aaadf4ef73f9cd75, type: 3}
+--- !u!1 &1437573626 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2000360776773802085, guid: 737edd361974f4084a25780f710cc52f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1207973713}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1448339301
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13098,6 +13108,23 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1207973713}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1737630636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1737630632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ec313c760cd64113b9db7f0c6843c25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  letterCanvas: {fileID: 1238208162}
+  inventory: {fileID: 1437573626}
+  gameManager: {fileID: 1803039261}
+  letterWithText: {fileID: 21300000, guid: 404ae6f089b86441ab3e64f8de163270, type: 3}
+  letterText: {fileID: 1864021869}
 --- !u!1 &1772518347 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1955142079556458, guid: 83e9a4cc29228e449b4e3c86a792e188,
