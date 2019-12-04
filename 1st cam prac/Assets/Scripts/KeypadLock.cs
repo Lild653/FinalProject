@@ -9,6 +9,7 @@ public class KeypadLock : MonoBehaviour
     public InputField textField;
     public GameObject screen;
     public GameObject gameManager;
+    public Text explanationText;
 
     private string password = "whistle";
     private string hintTrigger = "ufgqrjc";
@@ -52,10 +53,23 @@ public class KeypadLock : MonoBehaviour
         {
             if (myuserInput.Equals(hintTrigger))
             {
-                print("You're getting warmer. Hint 3 could be of use...");
+                explanationText.text = "You're getting warmer. Hint 3 could be of use...";
             }
             numTries--;
-            print("Password is incorrect. You have " + numTries + " remaining.");
+            if (numTries == 0)
+            {
+                gameManager.GetComponent<GameManager>().LostGame();
+            }
+            string newText = "ENTER PASSWORD TO UNLOCK DOOR. YOU HAVE " + numTries;
+            if (numTries == 1)
+            {
+                newText += " TRY REMAINING.";
+            }
+            else
+            {
+                newText += " TRIES REMAINING";
+            }
+            explanationText.text = newText;
         }
     }
 }
