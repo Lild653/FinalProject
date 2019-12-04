@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     public Text myText;
     public bool inputtingText = false;
     //private GameObject interact;
+    public Canvas inventoryCanvas;
 
 
     void Start()
@@ -24,6 +25,18 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (lightsOn)
+        {
+            lastPuzzleSolved = 2;
+        }
+        else if (!lightsOn && inventoryCanvas.GetComponent<Inventory>().inventorymap["Key"])
+        {
+            lastPuzzleSolved = 1;
+        }
+        else
+        {
+            lastPuzzleSolved = 0;
+        }
         secondsRemaining = startingSeconds - Time.time;
         int minutes = Mathf.FloorToInt(secondsRemaining / 60);
         int seconds = Mathf.FloorToInt(secondsRemaining - (minutes * 60));
