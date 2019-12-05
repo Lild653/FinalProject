@@ -14,14 +14,16 @@ public class CubeSelect : MonoBehaviour
     public GameObject key;
     public GameObject[] Pickupitems;
     public GameObject gameManager;
-    private RaycastHit vision;
+    public AudioClip objectCollected;
 
+    private RaycastHit vision;
+    private AudioSource myAudioSource;
 
     // Start is called before the first frame update
     void Start()
     {
         interactive.enabled = false;
-
+        myAudioSource = GetComponent<AudioSource>();
 
     }
 
@@ -58,6 +60,8 @@ public class CubeSelect : MonoBehaviour
                             key.GetComponent<Animator>().SetTrigger("CollectKey");
                             newList.Remove(key);
                             newList.Remove(currObject);
+                            AudioClip clip = objectCollected;
+                            myAudioSource.PlayOneShot(clip);
                             inventoryCanvas.GetComponent<Inventory>().OnCollect(key);
                             Pickupitems = new GameObject[newList.Count];
                             for (int i = 0; i < newList.Count; i++)
@@ -79,6 +83,8 @@ public class CubeSelect : MonoBehaviour
                     else if (currObject.CompareTag("Pickup"))
                     {
                         newList.Remove(currObject);
+                        AudioClip clip = objectCollected;
+                        myAudioSource.PlayOneShot(clip);
                         inventoryCanvas.GetComponent<Inventory>().OnCollect(currObject);
 
                         Pickupitems = new GameObject[newList.Count];
