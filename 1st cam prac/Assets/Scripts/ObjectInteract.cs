@@ -87,8 +87,7 @@ public class ObjectInteract : MonoBehaviour
 						newList.Remove(currObject);
 						AudioClip clip = objectCollected;
 						myAudioSource.PlayOneShot(clip);
-						inventoryCanvas.GetComponent<Inventory>().OnCollect(currObject);
-
+                        inventoryCanvas.GetComponent<Inventory>().OnCollect(currObject);
 						Pickupitems = new GameObject[newList.Count];
 						for (int i = 0; i < newList.Count; i++)
 						{

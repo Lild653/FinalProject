@@ -12,6 +12,7 @@ public class Inventory : MonoBehaviour
     public GameObject[] images;
     public Dictionary<string, bool> inventorymap;
     public GameObject myLight;
+    public GameObject instructions;
 
     // Start is called before the first frame update
     void Start()
@@ -77,6 +78,10 @@ public class Inventory : MonoBehaviour
                 if (myObject.name.Equals("Flashlight"))
                 {
                     myLight.GetComponent<Flashlight>().TurnOn();
+                }
+                if (myObject.name.Equals("Letter"))
+                {
+                    instructions.GetComponent<Instructions>().LetterInstructions();
                 }
             }
         }
