@@ -7,10 +7,15 @@ public class WinCheck : MonoBehaviour
 {
     void Update()
     {
-		if (other.collider.CompareTag("Won"))
-		{
-			Destroy(other.gameObject);
-			SceneManager.LoadScene("Win");
-		}
+		
 	}
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.collider.CompareTag("Won"))
+        {
+            Destroy(collision.gameObject);
+            SceneManager.LoadScene("Win");
+        }
+    }
 }
