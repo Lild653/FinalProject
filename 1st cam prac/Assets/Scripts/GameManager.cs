@@ -11,7 +11,12 @@ public class GameManager : MonoBehaviour
     public int lastPuzzleSolved = 0;
     public bool lightsOn;
     public Text myText;
+<<<<<<< Updated upstream
     public bool inputtingText = false;
+=======
+    public Vector3 lastCameraPos;
+    public GameObject myCam;
+>>>>>>> Stashed changes
     //private GameObject interact;
     public Canvas inventoryCanvas;
 
@@ -48,7 +53,7 @@ public class GameManager : MonoBehaviour
         {
             myText.text = "Time remaining: " + minutes.ToString() + ":" + seconds.ToString();
         }
-        if (seconds <= 0)
+        if (secondsRemaining <= 0)
         {
             LostGame();
         }
@@ -57,13 +62,8 @@ public class GameManager : MonoBehaviour
 
     public void LostGame()
     {
-
+        lastCameraPos = myCam.transform.position;
+        SceneManager.LoadScene("Lose");
     }
-
-    public void WonGame()
-    {
-
-    }
-
 
 }
