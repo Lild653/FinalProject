@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    private float startingSeconds = 900; 
+    private float startingSeconds = 10; 
 
     public int lastPuzzleSolved = 0;
     public bool lightsOn;
@@ -91,42 +91,35 @@ public class GameManager : MonoBehaviour
 
 
         secondsRemaining = startingSeconds - Time.time;
-
-        int minutes = Mathf.FloorToInt(secondsRemaining / 60);
-        int seconds = Mathf.FloorToInt(secondsRemaining - (minutes * 60));
-
-        if (seconds < 10)
+        if (secondsRemaining <= 0)
         {
-            myText.text = "Time remaining: " + minutes.ToString() + ":0" + seconds.ToString();
+            LostGame();
         }
         else
         {
-            myText.text = "Time remaining: " + minutes.ToString() + ":" + seconds.ToString();
+            int minutes = Mathf.FloorToInt(secondsRemaining / 60);
+            int seconds = Mathf.FloorToInt(secondsRemaining - (minutes * 60));
+
+            if (seconds < 10)
+            {
+                myText.text = "Time remaining: " + minutes.ToString() + ":0" + seconds.ToString();
+            }
+            else
+            {
+                myText.text = "Time remaining: " + minutes.ToString() + ":" + seconds.ToString();
+            }
         }
+        
 
         if(!inputtingText)
         {
             hintSystem();
         }
-            
-
-
-
-
-
-
-
-        if (secondsRemaining <= 0)
-        {
-            LostGame();
-        }
-
-
     }
 
     public void LostGame()
     {
-//        lastCameraPos = myCam.transform.position;
+        lastCameraPos = myCam.transform.position;
         SceneManager.LoadScene("Lose");
     }
 
@@ -185,6 +178,11 @@ public class GameManager : MonoBehaviour
 
 
         }
+    }
+
+    public Vector3 finalCameraPos()
+    {
+        return lastCameraPos;
     }
 
 }

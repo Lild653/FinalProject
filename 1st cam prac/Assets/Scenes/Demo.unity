@@ -14537,7 +14537,7 @@ MonoBehaviour:
   lightsOn: 0
   myText: {fileID: 1400058216}
   inputtingText: 0
-  myCam: {fileID: 0}
+  myCam: {fileID: 963194225}
   inventoryCanvas: {fileID: 2097233890}
   pause1: {fileID: 1861393547}
   pause2: {fileID: 1273251053}
