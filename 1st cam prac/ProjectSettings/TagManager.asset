@@ -11,6 +11,7 @@ TagManager:
   - Plate
   - Pickup
   - Interact
+  - Won
   layers:
   - Default
   - TransparentFX
