@@ -52,6 +52,10 @@ public class ObjectInteract : MonoBehaviour
 						{
 							currObject.GetComponent<WireBox>().Unlock();
 						}
+                        if ((currObject.name.Equals("Plate") || currObject.name.Equals("lock_1_open")) && inventoryCanvas.GetComponent<Inventory>().inventorymap["Key"])
+                        {
+                            currObject.GetComponentInParent<WireBox>().Unlock();
+                        }
 						if (currObject.name.Equals("Sofa"))
 						{
 
@@ -68,7 +72,7 @@ public class ObjectInteract : MonoBehaviour
 							}
 
 						}
-						if (currObject.name.Equals("Kepad"))
+						if (currObject.name.Equals("Keypad"))
 						{
 							currObject.GetComponent<KeypadLock>().EnterInput();
 						}
