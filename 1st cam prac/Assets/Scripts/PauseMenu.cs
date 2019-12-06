@@ -8,9 +8,9 @@ public class PauseMenu : MonoBehaviour
 
     public GameObject pauseMenu1;
     public Canvas inventoryCanvas;
-    public float time;
+    private float time;
     public GameObject pauseMenu2;
-    //public GameObject gameManager;
+    public GameObject gameManager;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,10 +23,10 @@ public class PauseMenu : MonoBehaviour
     void Update()
     {
         
-        if (Input.GetKey(KeyCode.P))
+        if (!gameManager.GetComponent<GameManager>().inputtingText && Input.GetKey(KeyCode.P))
         {
             float lastPressed = Time.time;
-            if (lastPressed - time > .1)
+            if (lastPressed - time > .2)
             {
                 if (inventoryCanvas.GetComponent<Inventory>().inventorymap["Letter"])
                 {

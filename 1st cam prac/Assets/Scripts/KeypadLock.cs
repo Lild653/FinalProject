@@ -46,7 +46,6 @@ public class KeypadLock : MonoBehaviour
         if(myuserInput.Equals(password))
         {
             screen.SetActive(false);
-            gameManager.GetComponent<GameManager>().lastPuzzleSolved = 2;
             Unlock();
         }
         else

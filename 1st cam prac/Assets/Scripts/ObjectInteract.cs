@@ -5,9 +5,7 @@ using UnityEngine;
 
 public class ObjectInteract : MonoBehaviour
 {
-    
-    //public GameObject iteme;
-    public Canvas interactive;
+ 
 	public Canvas inventoryCanvas;
 	public GameObject key;
 	public GameObject[] Pickupitems;
@@ -20,7 +18,7 @@ public class ObjectInteract : MonoBehaviour
 	// Start is called before the first frame update
 	void Start()
 	{
-		interactive.enabled = false;
+	
 		myAudioSource = GetComponent<AudioSource>();
 
 	}
@@ -42,7 +40,7 @@ public class ObjectInteract : MonoBehaviour
 		{
 			if (Vector3.Angle(transform.forward, currObject.transform.position - transform.position) < 15 && Math.Abs(currObject.transform.position.z - transform.position.z) < 3)
 			{
-				interactive.enabled = true;
+		
 				if (Input.GetKey(KeyCode.F) && !gameManager.GetComponent<GameManager>().inputtingText)
 				{
 

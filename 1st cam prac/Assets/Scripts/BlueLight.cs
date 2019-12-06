@@ -18,16 +18,6 @@ public class BlueLight : MonoBehaviour
     void Start()
     {
 
-        // wireWatch = new GameObject[2];
-        //properColors = new Color[8];
-        //properColors[0] = Color.red;
-        //properColors[1] = Color.magenta;
-        //properColors[2] = Color.yellow;
-        //properColors[3] = Color.green;
-        //properColors[4] = Color.cyan;
-        //properColors[5] = Color.grey;
-        //properColors[6] = Color.blue;
-        //properColors[7] = Color.black;
         properColors = new Color[5];
         properColors[0] = Color.cyan;
         properColors[1] = Color.magenta;
@@ -62,22 +52,21 @@ public class BlueLight : MonoBehaviour
         GameObject[] helper = GameObject.FindGameObjectsWithTag("Lights");
         if (ColorChecker())
         {
-            foreach(GameObject girly in helper)
+            foreach(GameObject lightBulb in helper)
             {
-                girly.GetComponentInChildren<Light>().enabled = true;
+                lightBulb.GetComponentInChildren<Light>().enabled = true;
                 
                
             }
             myLight.GetComponent<Flashlight>().TurnOff();
             letter.GetComponent<LetterScript>().BluelightLetter();
             gameManager.GetComponent<GameManager>().lightsOn = true;
-            gameManager.GetComponent<GameManager>().lastPuzzleSolved = 1;
         }
         else
         {
-            foreach (GameObject girly in helper)
+            foreach (GameObject lightBulb in helper)
             {
-                girly.GetComponentInChildren<Light>().enabled = false;
+                lightBulb.GetComponentInChildren<Light>().enabled = false;
             }
         }
 
