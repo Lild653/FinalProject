@@ -344,10 +344,10 @@ RectTransform:
   m_Father: {fileID: 79134477}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.3972457, y: 0.4716667}
-  m_AnchorMax: {x: 0.6317544, y: 0.5216667}
-  m_AnchoredPosition: {x: 3.5, y: -3.0999985}
-  m_SizeDelta: {x: 19.300003, y: 8.200001}
+  m_AnchorMin: {x: 0.27123794, y: 0.46}
+  m_AnchorMax: {x: 0.7346429, y: 0.5183334}
+  m_AnchoredPosition: {x: 8, y: -10}
+  m_SizeDelta: {x: 6.800003, y: 2.1999998}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &858766462
 MonoBehaviour:
@@ -376,13 +376,13 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 40
-    m_Alignment: 1
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Time: 53:06'
+  m_Text: with 53:06 minutes left
 --- !u!222 &858766463
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -425,7 +425,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 11, y: 189}
+  m_AnchoredPosition: {x: 11, y: 54}
   m_SizeDelta: {x: 428.1, y: 218}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1063650978
@@ -1545,6 +1545,10 @@ MonoBehaviour:
   inputtingText: 0
   myCam: {fileID: 1742425657}
   inventoryCanvas: {fileID: 79134476}
+  pause1: {fileID: 79134473}
+  pause2: {fileID: 79134473}
+  myHints: {fileID: 0}
+  hintCanvas: {fileID: 0}
 --- !u!4 &1998694311
 Transform:
   m_ObjectHideFlags: 0

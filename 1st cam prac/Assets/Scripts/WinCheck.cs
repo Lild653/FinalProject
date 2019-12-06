@@ -18,4 +18,12 @@ public class WinCheck : MonoBehaviour
             SceneManager.LoadScene("Win");
         }
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Won"))
+        {
+            SceneManager.LoadScene("Win");
+        }
+    }
 }

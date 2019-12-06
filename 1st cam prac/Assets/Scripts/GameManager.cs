@@ -31,11 +31,13 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        secondsRemaining = startingSeconds;
         myHints = hintCanvas.GetComponent<Text>();
         paused = false;
         wasPaused = false;
         timeOffSet = 0;
         pause1.SetActive(true);
+        
 
 
         time = Time.time;
@@ -45,9 +47,6 @@ public class GameManager : MonoBehaviour
         hints[1] = "Know your ABC's and your 123's";
         hints[2] = "I wonder if you ever found that note I left you";
         hints[3] = "Shifting letters might help";
-
-        secondsRemaining = startingSeconds;
-
     }
 
     // Update is called once per frame
