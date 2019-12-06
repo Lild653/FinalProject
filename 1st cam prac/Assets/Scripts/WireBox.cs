@@ -9,6 +9,7 @@ public class WireBox : MonoBehaviour
     public GameObject unlocked;
     public GameObject gameManager;
     public AudioClip unlockClip;
+    public GameObject instructions;
 
     private AudioSource myAudioSource;
     // Start is called before the first frame update
@@ -26,5 +27,6 @@ public class WireBox : MonoBehaviour
         unlocked.SetActive(true);
         myAudioSource.PlayOneShot(clip);
         unlockBoxAnimate.SetTrigger("UnlockBox");
+        instructions.GetComponent<Instructions>().BoxInstructions();
     }
 }
