@@ -11,12 +11,11 @@ public class GameManager : MonoBehaviour
     public int lastPuzzleSolved = 0;
     public bool lightsOn;
     public Text myText;
-<<<<<<< Updated upstream
     public bool inputtingText = false;
-=======
+
     public Vector3 lastCameraPos;
     public GameObject myCam;
->>>>>>> Stashed changes
+
     //private GameObject interact;
     public Canvas inventoryCanvas;
 
