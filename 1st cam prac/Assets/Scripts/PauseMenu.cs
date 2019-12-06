@@ -5,29 +5,31 @@ using UnityEngine;
 public class PauseMenu : MonoBehaviour
 {
 
-    public Canvas pauseMenu;
+    public GameObject pauseMenu;
+    public float time;
     //public GameObject gameManager;
     // Start is called before the first frame update
     void Start()
     {
-        pauseMenu.enabled = false;
+        pauseMenu.SetActive(false);
+        time = Time.time;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (!pauseMenu.enabled && Input.GetKey(KeyCode.P))
+        
+        if (Input.GetKey(KeyCode.P))
         {
-            pauseMenu.enabled = true;
-
-        }
-
-        if (pauseMenu.enabled)
-        {
-            if (Input.GetKey(KeyCode.P))
+            float lastPressed = Time.time;
+            if (lastPressed - time > 1)
             {
-                pauseMenu.enabled = false;
+                pauseMenu.SetActive(!pauseMenu.activeSelf);
+                time = lastPressed;
             }
+
         }
+
+        
     }
 }

@@ -10,13 +10,15 @@ public class HintStuff : MonoBehaviour
     public Text mytext;
     private int puzzleNumber;
     public GameObject gameManager;
+    public float time;
+    public GameObject hintCanvas; 
 
 
     // Start is called before the first frame update
     void Start()
     {
-        
-        gameObject.GetComponent<Text>().enabled = false;
+        time = Time.time;
+        gameObject.SetActive(false);
         hints = new string[3];
         hints[0] = "Find key to unlock";
         hints[1] = "Know your ABC's";
@@ -29,7 +31,8 @@ public class HintStuff : MonoBehaviour
     void Update()
     {
         puzzleNumber = gameManager.GetComponent<GameManager>().lastPuzzleSolved;
-        if (Input.GetKeyDown(KeyCode.H))
+
+        if (Input.GetKey(KeyCode.H))
         {
             switch (puzzleNumber)
             {
@@ -46,14 +49,19 @@ public class HintStuff : MonoBehaviour
                     break;
 
             }
-
-            gameObject.GetComponent<Text>().enabled = true;
+            float lastPressed = Time.time;
+            if (lastPressed - time > 1)
+            {
+                hintCanvas.SetActive(!hintCanvas.activeSelf);
+                time = lastPressed;
+            }
+          
+            
 
         }
-
-        else if (Input.GetKeyUp(KeyCode.H))
-        {
-           gameObject.GetComponent<Text>().enabled = false;
-        }
+        
+      
+         
+        
     }
 }
