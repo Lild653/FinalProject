@@ -28,5 +28,6 @@ public class WireBox : MonoBehaviour
         myAudioSource.PlayOneShot(clip);
         unlockBoxAnimate.SetTrigger("UnlockBox");
         instructions.GetComponent<Instructions>().BoxInstructions();
+        gameManager.GetComponent<GameManager>().lastPuzzleSolved = 1;
     }
 }

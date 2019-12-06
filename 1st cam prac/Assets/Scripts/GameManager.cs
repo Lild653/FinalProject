@@ -31,6 +31,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        myHints = hintCanvas.GetComponent<Text>();
         paused = false;
         wasPaused = false;
         timeOffSet = 0;
@@ -52,15 +53,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!lightsOn && !inventoryCanvas.GetComponent<Inventory>().inventorymap["Key"])
-        {
-            lastPuzzleSolved = 0;
-        }
-        else if (!lightsOn && inventoryCanvas.GetComponent<Inventory>().inventorymap["Key"])
-        {
-            lastPuzzleSolved = 1;
-        }
-        else if (lightsOn && !inventoryCanvas.GetComponent<Inventory>().inventorymap["Letter"])
+        if (lightsOn && !inventoryCanvas.GetComponent<Inventory>().inventorymap["Letter"])
         {
             lastPuzzleSolved = 2;
         }
@@ -187,11 +180,6 @@ public class GameManager : MonoBehaviour
 
                 }
                 hintCanvas.SetActive(!hintCanvas.activeSelf);
-
-
-
-
-
             }
 
 
