@@ -18,7 +18,7 @@ public class HintStuff : MonoBehaviour
     void Start()
     {
         time = Time.time;
-        gameObject.SetActive(false);
+        hintCanvas.SetActive(false);
         hints = new string[3];
         hints[0] = "Find key to unlock";
         hints[1] = "Know your ABC's";
@@ -50,7 +50,7 @@ public class HintStuff : MonoBehaviour
 
             }
             float lastPressed = Time.time;
-            if (lastPressed - time > 1)
+            if (lastPressed - time > 0.1)
             {
                 hintCanvas.SetActive(!hintCanvas.activeSelf);
                 time = lastPressed;
