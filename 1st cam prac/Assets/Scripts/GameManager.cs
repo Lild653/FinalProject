@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
     public GameObject myCam;
     public Canvas inventoryCanvas;
     public static Vector3 lastCameraPos;
+    public static Quaternion lastCameraRot;
     public static float secondsRemaining;
     public GameObject pause1;
     public GameObject pause2;
@@ -120,6 +121,7 @@ public class GameManager : MonoBehaviour
     public void LostGame()
     {
         lastCameraPos = myCam.transform.position;
+        lastCameraRot = myCam.transform.rotation;
         SceneManager.LoadScene("Lose");
     }
 
@@ -183,6 +185,11 @@ public class GameManager : MonoBehaviour
     public Vector3 finalCameraPos()
     {
         return lastCameraPos;
+    }
+
+    public Quaternion finalCameraRot()
+    {
+        return lastCameraRot;
     }
 
 }

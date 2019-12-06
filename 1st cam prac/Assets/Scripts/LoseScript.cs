@@ -7,11 +7,15 @@ public class LoseScript : MonoBehaviour
 {
     private float startingSeconds = 5;
     public GameObject lostScreen;
+    public GameObject myCam;
+    public GameObject gameManager;
     // Start is called before the first frame update
     void Start()
     {
         lostScreen.SetActive(false);
-        print("here");
+        myCam.transform.rotation = gameManager.GetComponent<GameManager>().finalCameraRot();
+        myCam.transform.position = gameManager.GetComponent<GameManager>().finalCameraPos();
+
     }
 
     // Update is called once per frame
