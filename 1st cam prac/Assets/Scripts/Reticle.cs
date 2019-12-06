@@ -20,7 +20,7 @@ public class Reticle : MonoBehaviour
 
     void Update()
     {
-        System.Boolean objeto = Physics.Raycast(Camera.main.ScreenPointToRay(new Vector3(.5f * Screen.width, .5f * Screen.height, 0)), out sightLine);
+        System.Boolean objeto = Physics.Raycast(Camera.main.ScreenPointToRay(new Vector3(.5f * Screen.width, .65f * Screen.height, 0)), out sightLine);
         
         if(objeto && sightLine.collider.CompareTag("Wires"))
         {
