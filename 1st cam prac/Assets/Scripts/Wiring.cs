@@ -6,9 +6,7 @@ public class Wiring : MonoBehaviour
 {
     // Start is called before the first frame update
     private ArrayList tempColor = new ArrayList();
-    public int i = 0;
-    public float distance;
-    public System.Boolean dragging;
+    private int i = 0;
     private RaycastHit mouseLocal;
 
     void Start()
@@ -30,20 +28,6 @@ public class Wiring : MonoBehaviour
 
     
 
-
-   
-   
-    /*
-    private void OnMouseDown()
-    {
-        distance = Vector3.Distance(transform.position, Camera.main.transform.position);
-        dragging = true;
-    }
-    private void OnMouseUp()
-    {
-        dragging = false;
-    }
-    */
 
     private void Update()
     {
@@ -73,14 +57,7 @@ public class Wiring : MonoBehaviour
           
 
         }
-        /*
-        if (dragging)
-        {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            Vector3 rayPoint = ray.GetPoint(distance);
-            transform.position = rayPoint;
-        }
-        */
+       
     }
 
 

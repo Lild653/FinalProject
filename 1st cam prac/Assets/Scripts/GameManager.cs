@@ -8,40 +8,104 @@ public class GameManager : MonoBehaviour
 {
     private float startingSeconds = 900;
     private float secondsRemaining;
-    public int lastPuzzleSolved = 0;
+    private int lastPuzzleSolved = 0;
     public bool lightsOn;
     public Text myText;
     public bool inputtingText = false;
 
     public Vector3 lastCameraPos;
-    public GameObject myCam;
+    //public GameObject myCam;
 
     //private GameObject interact;
     public Canvas inventoryCanvas;
+    public GameObject pause1;
+    public GameObject pause2;
+    private float pauseTime;
+    private System.Boolean paused;
+    private float timeOffSet;
+    private float timeSincePause = 0;
+    private float totalPause = 0;
+    System.Boolean wasPaused;
 
+
+
+    private string[] hints;
+    public Text myHints;
+    private float time;
+    public GameObject hintCanvas;
 
     void Start()
     {
-        
-        //interact = gameObject;
+        paused = false;
+        wasPaused = false;
+        timeOffSet = 0;
+        pause1.SetActive(true);
+
+
+        time = Time.time;
+        hintCanvas.SetActive(false);
+        hints = new string[5];
+        hints[0] = "If only there was a way to unlock the lock";
+        hints[1] = "Know your ABC's and your 123's";
+        hints[2] = "I wonder if you ever found that note I left you";
+        hints[3] = "Shifting letters might help";
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (lightsOn)
+
+
+
+
+        if (!lightsOn && !inventoryCanvas.GetComponent<Inventory>().inventorymap["Key"])
         {
-            lastPuzzleSolved = 2;
+            lastPuzzleSolved = 0;
         }
         else if (!lightsOn && inventoryCanvas.GetComponent<Inventory>().inventorymap["Key"])
         {
             lastPuzzleSolved = 1;
         }
+        else if (lightsOn && !inventoryCanvas.GetComponent<Inventory>().inventorymap["Letter"])
+        {
+            lastPuzzleSolved = 2;
+        }
+        else if (lightsOn && inventoryCanvas.GetComponent<Inventory>().inventorymap["Letter"])
+        {
+            lastPuzzleSolved = 3;
+        }
+
+
+
+
+        if (pause1.activeSelf == false && pause2.activeSelf == false) {
+            if (wasPaused)
+            {
+                totalPause += timeSincePause;
+                wasPaused = false;
+            }
+
+
+            secondsRemaining = startingSeconds - (Time.time - totalPause);
+            paused = false;
+
+        }
+        else if (paused)
+        {
+            timeSincePause = Time.time - pauseTime;
+
+            secondsRemaining = startingSeconds - pauseTime + totalPause;
+            wasPaused = true;
+        }
         else
         {
-            lastPuzzleSolved = 0;
+            pauseTime = Time.time;
+            paused = true;
         }
-        secondsRemaining = startingSeconds - Time.time;
+
+
+
         int minutes = Mathf.FloorToInt(secondsRemaining / 60);
         int seconds = Mathf.FloorToInt(secondsRemaining - (minutes * 60));
         if (seconds < 10)
@@ -52,17 +116,80 @@ public class GameManager : MonoBehaviour
         {
             myText.text = "Time remaining: " + minutes.ToString() + ":" + seconds.ToString();
         }
+
+        if(!inputtingText)
+        {
+            hintSystem();
+        }
+            
+
+
+
+
+
+
+
         if (secondsRemaining <= 0)
         {
             LostGame();
         }
 
+
     }
 
     public void LostGame()
     {
-        lastCameraPos = myCam.transform.position;
+//        lastCameraPos = myCam.transform.position;
         SceneManager.LoadScene("Lose");
     }
+
+
+    public void hintSystem()
+    {
+
+        if (Input.GetKey(KeyCode.H))
+        {
+            float lastPressed = Time.time;
+            if (lastPressed - time > 0.2)
+            {
+
+                time = lastPressed;
+                switch (lastPuzzleSolved)
+                {
+                    case 0:
+                        myHints.text = hints[0];
+                        
+                        break;
+
+                    case 1:
+                        myHints.text = hints[1];
+              
+                        break;
+
+                    case 2:
+                        myHints.text = hints[2];
+
+                        break;
+
+                    case 3:
+                        myHints.text = hints[3];
+
+                        break;
+
+                }
+                hintCanvas.SetActive(!hintCanvas.activeSelf);
+
+
+
+
+
+            }
+
+
+
+
+        }
+    }
+
 
 }

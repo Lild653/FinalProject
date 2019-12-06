@@ -21,7 +21,6 @@ public class WireBox : MonoBehaviour
 
     public void Unlock()
     {
-        gameManager.GetComponent<GameManager>().lastPuzzleSolved = 0;
         locked.SetActive(false);
         AudioClip clip = unlockClip;
         unlocked.SetActive(true);
