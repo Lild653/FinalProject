@@ -7,40 +7,40 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     private float startingSeconds = 900;
-    private float secondsRemaining;
+    
+
     public int lastPuzzleSolved = 0;
     public bool lightsOn;
     public Text myText;
     public bool inputtingText = false;
-
-    public Vector3 lastCameraPos;
     public GameObject myCam;
-
-    //private GameObject interact;
     public Canvas inventoryCanvas;
+    public static Vector3 lastCameraPos;
+    public static float secondsRemaining;
 
 
     void Start()
     {
 
         //interact = gameObject;
+        secondsRemaining = startingSeconds;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (lightsOn)
-        {
-            lastPuzzleSolved = 2;
-        }
-        else if (!lightsOn && inventoryCanvas.GetComponent<Inventory>().inventorymap["Key"])
-        {
-            lastPuzzleSolved = 1;
-        }
-        else
-        {
-            lastPuzzleSolved = 0;
-        }
+    //    if (lightsOn)
+    //    {
+    //        lastPuzzleSolved = 2;
+    //    }
+    //    else if (!lightsOn && inventoryCanvas.GetComponent<Inventory>().inventorymap["Key"])
+    //    {
+    //        lastPuzzleSolved = 1;
+    //    }
+    //    else
+    //    {
+    //        lastPuzzleSolved = 0;
+    //    }
         secondsRemaining = startingSeconds - Time.time;
         int minutes = Mathf.FloorToInt(secondsRemaining / 60);
         int seconds = Mathf.FloorToInt(secondsRemaining - (minutes * 60));
@@ -63,6 +63,20 @@ public class GameManager : MonoBehaviour
     {
         lastCameraPos = myCam.transform.position;
         SceneManager.LoadScene("Lose");
+    }
+
+    public string WinTime()
+    {
+        int minutes = Mathf.FloorToInt(secondsRemaining / 60);
+        int seconds = Mathf.FloorToInt(secondsRemaining - (minutes * 60));
+        if (seconds < 10)
+        {
+            return minutes.ToString() + ":0" + seconds.ToString();
+        }
+        else
+        {
+            return minutes.ToString() + ":" + seconds.ToString();
+        }
     }
 
 }

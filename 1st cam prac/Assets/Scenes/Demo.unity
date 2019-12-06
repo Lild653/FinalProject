@@ -1580,7 +1580,7 @@ MonoBehaviour:
   mytext: {fileID: 447159576}
   gameManager: {fileID: 1803039261}
   time: 0
-  hintCanvas: {fileID: 0}
+  hintCanvas: {fileID: 2063214885}
 --- !u!1 &464082519 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1693633287523976, guid: 83e9a4cc29228e449b4e3c86a792e188,
@@ -14054,7 +14054,6 @@ MonoBehaviour:
   lightsOn: 0
   myText: {fileID: 1400058216}
   inputtingText: 0
-  lastCameraPos: {x: 0, y: 0, z: 0}
   myCam: {fileID: 0}
   inventoryCanvas: {fileID: 2097233890}
 --- !u!4 &1803039263
