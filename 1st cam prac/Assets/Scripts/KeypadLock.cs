@@ -10,15 +10,19 @@ public class KeypadLock : MonoBehaviour
     public GameObject screen;
     public GameObject gameManager;
     public Text explanationText;
+    public AudioClip wrongPassword;
+    public AudioClip correct;
 
     private string password = "whistle";
     private string hintTrigger = "ufgqrjc";
     private int numTries = 3;
+    private AudioSource myAudioSource;
 
     // Start is called before the first frame update
     void Start()
     {
         screen.SetActive(false);
+        myAudioSource = GetComponent<AudioSource>();
     }
 
 
@@ -45,11 +49,15 @@ public class KeypadLock : MonoBehaviour
     {
         if(myuserInput.Equals(password))
         {
+            AudioClip clip = correct;
+            myAudioSource.PlayOneShot(correct);
             screen.SetActive(false);
             Unlock();
         }
         else
         {
+            AudioClip clip = wrongPassword;
+            myAudioSource.PlayOneShot(clip);
             if (myuserInput.Equals(hintTrigger))
             {
                 explanationText.text = "You're getting warmer. Hint 3 could be of use...";

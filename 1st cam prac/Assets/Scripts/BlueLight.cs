@@ -11,8 +11,10 @@ public class BlueLight : MonoBehaviour
     public GameObject gameManager;
     public GameObject letter;
     public Light myLight;
+    public AudioClip lightsOn;
     private Color [] properColors;
     private new Color renderer;
+    private AudioSource myAudioSource;
     
 
     void Start()
@@ -24,6 +26,7 @@ public class BlueLight : MonoBehaviour
         properColors[2] = Color.yellow;
         properColors[3] = Color.red;
         properColors[4] = Color.green;
+        myAudioSource = GetComponent<AudioSource>();
     }
 
     
@@ -60,7 +63,9 @@ public class BlueLight : MonoBehaviour
             }
             myLight.GetComponent<Flashlight>().TurnOff();
             letter.GetComponent<LetterScript>().BluelightLetter();
+            AudioClip clip = lightsOn;
             gameManager.GetComponent<GameManager>().lightsOn = true;
+            //myAudioSource.PlayOneShot(clip);
         }
         else
         {
