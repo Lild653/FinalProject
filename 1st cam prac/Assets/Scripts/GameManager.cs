@@ -46,7 +46,7 @@ public class GameManager : MonoBehaviour
         hintCanvas.SetActive(false);
         hints = new string[5];
         hints[0] = "If only there was a way to unlock the lock";
-        hints[1] = "Know your ABC's and your 123's";
+        hints[1] = "Know your ABC's, not just your 123's";
         hints[2] = "I wonder if you ever found that note I left you";
         hints[3] = "Take a page out of Caesar's cryptography. The last sentence should help";
     }
