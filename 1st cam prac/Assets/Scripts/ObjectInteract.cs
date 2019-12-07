@@ -49,10 +49,23 @@ public class ObjectInteract : MonoBehaviour
 						if (currObject.name.Equals("UnlockBoxParent") && inventoryCanvas.GetComponent<Inventory>().inventorymap["Key"])
 						{
 							currObject.GetComponent<WireBox>().Unlock();
+                            newList.Remove(currObject);
+                            foreach(GameObject myObject in newList)
+                            {
+                                if (myObject.name.Equals("Plate") || myObject.name.Equals("lock_1_open")) {
+                                    newList.Remove(myObject);
+                                }
+                            }
 						}
                         if ((currObject.name.Equals("Plate") || currObject.name.Equals("lock_1_open")) && inventoryCanvas.GetComponent<Inventory>().inventorymap["Key"])
                         {
                             currObject.GetComponentInParent<WireBox>().Unlock();
+                            foreach (GameObject myObject in newList)
+                            {
+                                if (myObject.name.Equals("Plate") || myObject.name.Equals("lock_1_open") && myObject.name.Equals("Plate")) {
+                                    newList.Remove(myObject);
+                                }
+                            }
                         }
 						if (currObject.name.Equals("Sofa"))
 						{
