@@ -11,8 +11,8 @@ public class LoseScript : MonoBehaviour
     public GameObject gameManager;
     public AudioClip flood;
     public AudioClip lost;
-
-    private AudioSource myAudioSource;
+    public AudioSource floodSource;
+    public AudioSource lostSource;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,9 +20,7 @@ public class LoseScript : MonoBehaviour
         myCam.transform.rotation = gameManager.GetComponent<GameManager>().finalCameraRot();
         myCam.transform.position = gameManager.GetComponent<GameManager>().finalCameraPos();
         AudioClip clip = flood;
-        myAudioSource = GetComponent<AudioSource>();
-        myAudioSource.clip = clip;
-        myAudioSource.Play();
+        floodSource.Play();
     }
 
     // Update is called once per frame
@@ -34,8 +32,8 @@ public class LoseScript : MonoBehaviour
         
         //if (Time.time <= 20.0)
         {
-            //myAudioSource.Stop();
-            myAudioSource.clip = lost;
+            floodSource.Stop();
+            lostSource.Play();
             //myAudioSource.Play();
             lostScreen.SetActive(true);
         }
