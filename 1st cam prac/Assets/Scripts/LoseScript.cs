@@ -33,8 +33,7 @@ public class LoseScript : MonoBehaviour
         //if (Time.time <= 20.0)
         {
             floodSource.Stop();
-            //lostSource.PlayOneShot(lost);
-            //myAudioSource.Play();
+            //lostSource.PlayOneShot(lostSource.clip);
             lostScreen.SetActive(true);
         }
     }
