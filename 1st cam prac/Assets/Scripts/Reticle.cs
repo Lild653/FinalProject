@@ -13,14 +13,15 @@ public class Reticle : MonoBehaviour
 
     void Start()
     {
-        gameObject.GetComponent<RectTransform>().position.Set(.5f * Screen.width, .5f * Screen.height, 0);
+        //gameObject.GetComponent<RectTransform>().position.Set(.5f * Screen.width, .5f * Screen.height, 0);
         startingColor = gameObject.GetComponent<Image>().color;
 
     }
 
     void Update()
     {
-        System.Boolean objeto = Physics.Raycast(Camera.main.ScreenPointToRay(new Vector3(.5f * Screen.width, .65f * Screen.height, 0)), out sightLine);
+        
+        System.Boolean objeto = Physics.Raycast(Camera.main.ScreenPointToRay(new Vector3(.5f * Screen.width, gameObject.GetComponent<RectTransform>().position.y, 0)), out sightLine);
         
         if(objeto && sightLine.collider.CompareTag("Wires"))
         {

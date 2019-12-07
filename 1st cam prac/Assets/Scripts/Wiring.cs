@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Wiring : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class Wiring : MonoBehaviour
     private ArrayList tempColor = new ArrayList();
     private int i = 0;
     private RaycastHit mouseLocal;
+    public Image img;
 
     void Start()
     {
@@ -31,8 +33,8 @@ public class Wiring : MonoBehaviour
 
     private void Update()
     {
-    
-        System.Boolean objeto = Physics.Raycast(Camera.main.ScreenPointToRay(new Vector3(.5f * Screen.width, .65f * Screen.height, 0)), out mouseLocal);
+        
+        System.Boolean objeto = Physics.Raycast(Camera.main.ScreenPointToRay(new Vector3(.5f * Screen.width, img.GetComponent<RectTransform>().position.y, 0)), out mouseLocal);
         if (objeto && mouseLocal.collider.gameObject == gameObject && Input.GetKeyDown(KeyCode.A)) 
         {
 
