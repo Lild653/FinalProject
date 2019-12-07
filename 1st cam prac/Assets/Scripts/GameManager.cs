@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    private float startingSeconds = 10; 
+    private float startingSeconds = 900; 
 
     public int lastPuzzleSolved = 0;
     public bool lightsOn;
@@ -32,6 +32,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        startingSeconds = 900;
         secondsRemaining = startingSeconds;
         myHints = hintCanvas.GetComponent<Text>();
         paused = false;
@@ -47,7 +48,7 @@ public class GameManager : MonoBehaviour
         hints[0] = "If only there was a way to unlock the lock";
         hints[1] = "Know your ABC's and your 123's";
         hints[2] = "I wonder if you ever found that note I left you";
-        hints[3] = "Shifting letters might help";
+        hints[3] = "Take a page out of Caesar's cryptography. The last sentence should help";
     }
 
     // Update is called once per frame
