@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    private float startingSeconds = 10; 
+    private float startingSeconds = 600; 
 
     public int lastPuzzleSolved = 0;
     public bool lightsOn;
