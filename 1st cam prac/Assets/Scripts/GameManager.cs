@@ -34,8 +34,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        //startingSeconds = 900;
-        startingSeconds = 10;
+        
         secondsRemaining = startingSeconds;
         myHints = hintCanvas.GetComponent<Text>();
         paused = false;
@@ -83,6 +82,7 @@ public class GameManager : MonoBehaviour
         }
         else if (paused)
         {
+            
             timeSincePause = Time.time - pauseTime;
 
             secondsRemaining = startingSeconds - pauseTime + totalPause;
@@ -90,12 +90,13 @@ public class GameManager : MonoBehaviour
         }
         else
         {
+   
             pauseTime = Time.time;
             paused = true;
         }
 
 
-        secondsRemaining = startingSeconds - Time.time;
+        //secondsRemaining = startingSeconds - Time.time;
         if (secondsRemaining <= 10 && !myAS.isPlaying)
         {
             myAS.PlayOneShot(ticking);
