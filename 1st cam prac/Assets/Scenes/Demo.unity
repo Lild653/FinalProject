@@ -2821,7 +2821,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh33378
+  m_Name: pb_Mesh36540
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -6540,7 +6540,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ed9f8621078b49d4838128bd48831ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  img: {fileID: 0}
+  img: {fileID: 333520808}
 --- !u!1 &1136778478
 GameObject:
   m_ObjectHideFlags: 0
@@ -8729,7 +8729,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ed9f8621078b49d4838128bd48831ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  img: {fileID: 0}
+  img: {fileID: 333520808}
 --- !u!1 &1257732981
 GameObject:
   m_ObjectHideFlags: 0
@@ -10200,7 +10200,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ed9f8621078b49d4838128bd48831ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  img: {fileID: 0}
+  img: {fileID: 333520808}
 --- !u!1 &1260059851
 GameObject:
   m_ObjectHideFlags: 0
@@ -13819,7 +13819,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ed9f8621078b49d4838128bd48831ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  img: {fileID: 0}
+  img: {fileID: 333520808}
 --- !u!1 &1695967546
 GameObject:
   m_ObjectHideFlags: 0
@@ -17018,7 +17018,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ed9f8621078b49d4838128bd48831ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  img: {fileID: 0}
+  img: {fileID: 333520808}
 --- !u!1 &2085074132 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 41fe8e1ce2fd5644fbb16d25670f303a,
