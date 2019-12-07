@@ -29,17 +29,20 @@ public class GameManager : MonoBehaviour
     public Text myHints;
     private float time;
     public GameObject hintCanvas;
+    public AudioClip ticking;
+    private AudioSource myAS;
 
     void Start()
     {
-        startingSeconds = 900;
+        //startingSeconds = 900;
+        startingSeconds = 10;
         secondsRemaining = startingSeconds;
         myHints = hintCanvas.GetComponent<Text>();
         paused = false;
         wasPaused = false;
         timeOffSet = 0;
         pause1.SetActive(true);
-        
+        myAS = GetComponent<AudioSource>();
 
 
         time = Time.time;
@@ -93,6 +96,10 @@ public class GameManager : MonoBehaviour
 
 
         secondsRemaining = startingSeconds - Time.time;
+        if (secondsRemaining <= 10 && !myAS.isPlaying)
+        {
+            myAS.PlayOneShot(ticking);
+        }
         if (secondsRemaining <= 0)
         {
             LostGame();
