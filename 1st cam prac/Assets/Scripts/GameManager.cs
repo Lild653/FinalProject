@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    private float startingSeconds = 600; 
+    private float startingSeconds = 900; 
 
     public int lastPuzzleSolved = 0;
     public bool lightsOn;
@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
     public GameObject myCam;
     public Canvas inventoryCanvas;
     public static Vector3 lastCameraPos;
+    public static Quaternion lastCameraRot;
     public static float secondsRemaining;
     public GameObject pause1;
     public GameObject pause2;
@@ -31,6 +32,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        startingSeconds = 900;
         secondsRemaining = startingSeconds;
         myHints = hintCanvas.GetComponent<Text>();
         paused = false;
@@ -46,7 +48,7 @@ public class GameManager : MonoBehaviour
         hints[0] = "If only there was a way to unlock the lock";
         hints[1] = "Know your ABC's and your 123's";
         hints[2] = "I wonder if you ever found that note I left you";
-        hints[3] = "Shifting letters might help";
+        hints[3] = "Take a page out of Caesar's cryptography. The last sentence should help";
     }
 
     // Update is called once per frame
@@ -120,6 +122,7 @@ public class GameManager : MonoBehaviour
     public void LostGame()
     {
         lastCameraPos = myCam.transform.position;
+        lastCameraRot = myCam.transform.rotation;
         SceneManager.LoadScene("Lose");
     }
 
@@ -183,6 +186,11 @@ public class GameManager : MonoBehaviour
     public Vector3 finalCameraPos()
     {
         return lastCameraPos;
+    }
+
+    public Quaternion finalCameraRot()
+    {
+        return lastCameraRot;
     }
 
 }

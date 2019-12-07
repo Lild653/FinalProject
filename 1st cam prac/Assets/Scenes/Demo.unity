@@ -2130,6 +2130,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   screen: {fileID: 0}
+  gameManager: {fileID: 0}
 --- !u!114 &588502343
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2620,6 +2621,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   screen: {fileID: 1003540540}
+  gameManager: {fileID: 1803039261}
 --- !u!114 &626562444
 MonoBehaviour:
   m_ObjectHideFlags: 0

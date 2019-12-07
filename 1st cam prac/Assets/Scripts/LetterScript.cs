@@ -29,6 +29,6 @@ public class LetterScript : MonoBehaviour
     public void BluelightLetter()
     {
        gameObject.GetComponent<Image>().sprite = letterWithText;
-       letterText.text = "YoU thought you could get away with betraying me, but you won't. AFter the grounds flood you will die, all evidence will Go away, and no one will ever know what I've done. As one final quest, I've given you some opportunities to escape. I don't think you can figuRe it out, but I'd jUST love to see you die trying. A mere door stands between you and your freedom. It's locked, of course. crack the code within three tries and you'll escape. Fail, and you will meet your untimely fate. Don't worry-- I'll give you a +2 to your own funeral. The clock is ticking.";
+       letterText.text = "YoU thought you could get away with betraying me, but you won’t. AFter the grounds flood you will die, all evidence will Go away, and no one will ever know what I’ve done. As one final Quest, I’ve given you some opportunities to escape. I don’t think you can figuRe it out, but I’d Just love to see you die trying. A mere door stands between you and your freedom.It’s locked, of course. Crack the Code within three tries and you’ll escape. Fail, and you will meet your untimely fate.Don’t worry--I’ll give you a +2 to your own funeral.";
     }
 }
